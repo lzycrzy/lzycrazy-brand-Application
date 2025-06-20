@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- LzyCrazy Logo -->
+
+        <!-- Search Bar -->
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="225dp"
+            android:layout_height="181dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:contentDescription="LzyCrazy Logo"
+            android:src="@drawable/lzycrazy_logo" />
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search Features"
+            android:background="@drawable/input_bg_round"
+            android:drawableEnd="@drawable/icons8_search_120"
+            android:drawablePadding="12dp"
+            android:drawableTint="@color/colorGrey"
+            android:padding="12dp"
+            android:layout_marginTop="80dp"
+            android:inputType="text" />
+
+        <!-- Horizontal Buttons for Login and Signup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="80dp">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/gradient_button"
+                android:text="Login" />
+
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:backgroundTint="@null"
+                android:background="@drawable/gradient_button"
+                android:layout_marginStart="8dp"
+                android:text="Sign Up" />
+        </LinearLayout>
+
+        <!-- Menu Buttons using GridLayout -->
+        <GridLayout
+            android:id="@+id/bottomMenuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:alignmentMode="alignMargins"
+
+            android:columnCount="2"
+            android:padding="8dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/rounded_white_button"
+                app:backgroundTint="@null"
+                android:text="About Us"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/rounded_white_button"
+                app:backgroundTint="@null"
+                android:text="We Are Hiring"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/rounded_white_button"
+                app:backgroundTint="@null"
+                android:text="LzyCrazy Services"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/rounded_white_button"
+                app:backgroundTint="@null"
+                android:text="LzyCrazy Marketplace"
+                android:textColor="@android:color/black" />
+
+
+        </GridLayout>
+        <!-- Centered last button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/rounded_white_button"
+                app:backgroundTint="@null"
+                android:text="LzyCrazy News"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
