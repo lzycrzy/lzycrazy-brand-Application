@@ -1,5 +1,6 @@
 package com.example.lzycrazy
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,10 @@ class HomeActivity : AppCompatActivity() {
 
         val loginButton = findViewById<Button>(R.id.loginButton)
         val signupButton = findViewById<Button>(R.id.signupButton)
+        val aboutUsButton = findViewById<Button>(R.id.aboutUsButton)
+        val hiringButton = findViewById<Button>(R.id.hiringButton)
+        val servicesButton = findViewById<Button>(R.id.servicesButton)
+
 
         loginButton.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -20,5 +25,15 @@ class HomeActivity : AppCompatActivity() {
         signupButton.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
         }
+        aboutUsButton.setOnClickListener {
+            startActivity(Intent(this, AboutUsActivity::class.java))
+        }
+        hiringButton.setOnClickListener {
+            startActivity(Intent(this, HiringActivity::class.java))
+        }
+        servicesButton.setOnClickListener {
+            startActivity(Intent(this, ServicesActivity::class.java))
+        }
+
     }
 }
