@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            style="@style/FormTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="WE ARE HIRING" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Please sign up to get your LyCrazy ID.\nThen enter your LyCrazy ID (e.g. lc09240031) below."
+            android:textColor="#444444"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            style="@style/FormButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sign Up Here" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LzyCrazy ID" />
+
+        <EditText
+            android:id="@+id/editTextLyCrazyID"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LzyCrazy ID (e.g. lc09240031)"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country" />
+
+        <EditText
+            android:id="@+id/editTextCountry"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Country"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State" />
+
+        <EditText
+            android:id="@+id/editTextState"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="State"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Education" />
+
+        <EditText
+            android:id="@+id/editTextEducation"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Education"
+            android:inputType="text" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height (cm)" />
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height (cm)"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight (kg)" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight (kg)"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            style="@style/FormLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Job Category"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerJobCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <TextView
+            style="@style/FormLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Experience Level"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerExperienceLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext" />
+
+        <TextView
+            style="@style/FormFieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Yourself" />
+
+        <EditText
+            android:id="@+id/editTextAboutYourself"
+            style="@style/FormInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="About Yourself (20 words)"
+            android:inputType="textMultiLine"
+            android:maxLines="3" />
+
+        <TextView
+            style="@style/FormLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload 15s Video" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonUploadVideo"
+                style="@style/FormButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Choose File" />
+
+            <Button
+                android:id="@+id/buttonOpenCamera"
+                style="@style/FormButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Open Camera" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonClear"
+                style="@style/FormButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                style="@style/FormButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Submit" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
