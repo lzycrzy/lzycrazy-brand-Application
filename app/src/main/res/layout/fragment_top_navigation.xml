@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavigationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/appIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:contentDescription="app_icon"
+            android:src="@drawable/lzycrazy_logo_home_screen" />
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Icon style group: use background drawable and padding -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="search"
+                android:src="@drawable/search_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/plusIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="add"
+                android:src="@drawable/plus_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/storeIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="store"
+                android:src="@drawable/app_store_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/messageIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="message"
+                android:src="@drawable/message_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/cartIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="cart"
+                android:src="@drawable/cart_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/icon_background"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="menu"
+                android:src="@drawable/menu_bar_icon" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Full-width Divider (this will span the screen width) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>
