@@ -10,11 +10,14 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val createAccountButton = findViewById<Button>(R.id.createAccountButton)
+        val loginButton = findViewById<Button>(R.id.loginButton)
         createAccountButton.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
-
-
+        }
+        loginButton.setOnClickListener {
+            val intent = Intent(this, HomeScreenActivity::class.java)
+            startActivity(intent)
         }
 
     }
