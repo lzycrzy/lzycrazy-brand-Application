@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/categories" />
+    <item android:id="@+id/nav_vehicles" android:title="@string/vehicles" />
+    <item android:id="@+id/nav_real_estate" android:title="@string/real_estate" />
+    <item android:id="@+id/nav_electronics" android:title="@string/electronics" />
+    <item android:id="@+id/nav_fashion" android:title="@string/fashion" />
+    <item android:id="@+id/nav_jobs" android:title="@string/jobs" />
+    <item android:id="@+id/nav_services" android:title="@string/services" />
+    <item android:id="@+id/nav_pets" android:title="@string/pets" />
+    <item android:id="@+id/nav_furniture" android:title="@string/furniture" />
+    <item android:id="@+id/nav_books" android:title="@string/books" />
+</menu>
