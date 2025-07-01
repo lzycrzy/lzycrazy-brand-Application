@@ -50,7 +50,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
     implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.activity:activity:1.10.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
     //noinspection Aligned16KB
     implementation("com.google.ar.sceneform:filament-android:1.17.1")
     implementation("de.hdodenhof:circleimageview:3.1.0")
