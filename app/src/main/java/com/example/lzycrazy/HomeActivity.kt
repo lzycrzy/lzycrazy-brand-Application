@@ -16,6 +16,8 @@ class HomeActivity : AppCompatActivity() {
         val aboutUsButton = findViewById<Button>(R.id.aboutUsButton)
         val hiringButton = findViewById<Button>(R.id.hiringButton)
         val servicesButton = findViewById<Button>(R.id.servicesButton)
+        val marketplaceButton = findViewById<Button>(R.id.marketplaceButton)
+        val newsButton = findViewById<Button>(R.id.newsButton)
 
 
         loginButton.setOnClickListener {
@@ -33,6 +35,12 @@ class HomeActivity : AppCompatActivity() {
         }
         servicesButton.setOnClickListener {
             startActivity(Intent(this, ServicesActivity::class.java))
+        }
+        marketplaceButton.setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
+        }
+        newsButton.setOnClickListener {
+            startActivity(Intent(this, NewsActivity::class.java))
         }
 
     }

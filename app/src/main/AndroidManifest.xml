@@ -23,9 +23,19 @@
             android:name=".HiringActivity"
             android:exported="false" />
         <activity
+            android:name=".MarketplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutUsActivity"
             android:exported="false"
-            android:theme="@style/Theme.LzyCrazy" /> <!-- Splash screen: App splash Screen -->
+            android:theme="@style/Theme.LzyCrazy" />
+        <activity
+            android:name=".LzyMarketplaceActivity"
+            android:exported="false" />
+        <!-- Splash screen: App splash Screen -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
