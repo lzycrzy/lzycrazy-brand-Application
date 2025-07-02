@@ -61,6 +61,9 @@ dependencies {
 =======
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     implementation("com.google.ar.sceneform:filament-android:1.17.1")
     implementation("de.hdodenhof:circleimageview:3.1.0")

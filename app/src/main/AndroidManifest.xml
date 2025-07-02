@@ -40,6 +40,9 @@
         <activity
             android:name=".LzyMarketplaceActivity"
             android:exported="false" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         <activity
             android:name=".SplashActivity"
