@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lzycrazy">
+
     <!-- Internet permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -24,47 +25,54 @@
         <activity
             android:name=".HomeScreenActivity"
             android:exported="false" />
+
         <activity
             android:name=".ServicesActivity"
             android:exported="false" />
+
         <activity
             android:name=".HiringActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".MarketplaceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".NewsActivity"
+            android:exported="false" />
+
         <activity
             android:name=".AboutUsActivity"
             android:exported="false"
-<<<<<<< Updated upstream
-            android:theme="@style/Theme.LzyCrazy" /> <!-- Splash screen: App splash Screen -->
-=======
             android:theme="@style/Theme.LzyCrazy" />
+
         <activity
             android:name=".LzyMarketplaceActivity"
             android:exported="false" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+        <!-- Splash screen: App splash Screen -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
+
     </application>
 
 </manifest>

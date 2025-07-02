@@ -55,22 +55,12 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
     implementation("androidx.cardview:cardview:1.0.0")
-<<<<<<< Updated upstream
-    implementation("androidx.activity:activity:1.10.1")
-    //noinspection Aligned16KB
-=======
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     implementation("com.google.ar.sceneform:filament-android:1.17.1")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("androidx.activity:activity:1.10.1")
+    
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
