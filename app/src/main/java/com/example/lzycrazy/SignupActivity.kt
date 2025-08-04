@@ -1,5 +1,6 @@
 package com.example.lzycrazy
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -59,6 +60,7 @@ class SignupActivity : AppCompatActivity() {
                     }
                 })
         }
+
 
 
 

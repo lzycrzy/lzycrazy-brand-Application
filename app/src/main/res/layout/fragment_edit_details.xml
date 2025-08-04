@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Top Profile Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/lzycrazy_logo">
+
+        <!-- White bottom strip -->
+        <View
+            android:id="@+id/whiteBackground"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white" />
+
+        <!-- Profile image container -->
+        <FrameLayout
+            android:id="@+id/profileImageContainer"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile_placeholder"
+                android:background="@drawable/ic_circle_background"
+                android:contentDescription="Profile Image"
+                android:clipToOutline="true" />
+
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_camera_add"
+                android:background="@drawable/circle_background"
+                android:padding="2dp" />
+        </FrameLayout>
+
+        <!-- Name and Friends Count -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/profileImageContainer"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="-8dp"
+            android:layout_toEndOf="@id/profileImageContainer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Jaahid Hasan"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/friendCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="128 "
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/friendCount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" friends"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LightGrey" />
+
+    <!-- Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="#F2F3F5"
+        android:layout_marginTop="8dp"
+        android:baselineAligned="false"
+        android:weightSum="10">
+
+        <!-- Add to Story Button -->
+        <Button
+            android:id="@+id/btn_add_story"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:text="Add to story"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/denim_blue"
+            android:background="@drawable/topdown_rounded_bg"
+            android:drawablePadding="8dp"
+            android:padding="0dp"
+            android:backgroundTint="@color/denim_blue" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="match_parent" />
+
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="4"
+            android:text="Edit profile"
+            app:backgroundTint="@color/denim_blue"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/topdown_rounded_bg"
+            android:drawablePadding="8dp"
+            android:padding="0dp"
+            android:backgroundTint="@color/denim_blue" />
+
+        <!-- Spacer -->
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="match_parent" />
+
+        <!-- Settings Button -->
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/outline_settings_threeline"
+            android:background="@drawable/topdown_rounded_bg"
+            android:backgroundTint="#E4E6EB"
+            android:contentDescription="Settings"
+            android:scaleType="centerInside"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Bar with Title and Cancel Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/top_rounded_bg"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="   About"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#000" />
+
+                <ImageButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cancel"
+                    android:backgroundTint="#CCCCCC"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Editable Fields -->
+            <EditText android:id="@+id/etBio" style="@style/EditField" android:hint="Bio"/>
+            <EditText android:id="@+id/etEmail" style="@style/EditField" android:hint="Email" android:inputType="textEmailAddress"/>
+            <EditText android:id="@+id/etPhone" style="@style/EditField" android:hint="Phone" android:inputType="phone"/>
+
+            <Spinner android:id="@+id/spinnerGender" style="@style/SpinnerField"/>
+            <Spinner android:id="@+id/spinnerCountry" style="@style/SpinnerField"/>
+            <Spinner android:id="@+id/spinnerStatus" style="@style/SpinnerField"/>
+            <Spinner android:id="@+id/spinnerBlood" style="@style/SpinnerField"/>
+
+            <EditText android:id="@+id/etWebsite" style="@style/EditField" android:hint="Website" android:inputType="textUri"/>
+            <EditText android:id="@+id/etInterests" style="@style/EditField" android:hint="Interests"/>
+            <EditText android:id="@+id/etLocation" style="@style/EditField" android:hint="Location"/>
+            <EditText android:id="@+id/etDob" style="@style/EditField" android:hint="Date of Birth" android:inputType="date"/>
+            <EditText android:id="@+id/etProfession" style="@style/EditField" android:hint="Profession"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

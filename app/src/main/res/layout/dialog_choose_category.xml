@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#80000000"> <!-- Optional: transparent black background -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_rounded_bg"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="16dp">
+
+        <!-- Title Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a Category"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:id="@+id/closeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Close Button"/>
+        </RelativeLayout>
+
+        <!-- Categories & Options -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Left Categories -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:text="Test"
+                    android:padding="12dp"
+                    android:background="?attr/selectableItemBackground" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_right"
+                    android:text="Electronics"
+                    android:padding="12dp"
+                    android:background="?attr/selectableItemBackground" />
+            </LinearLayout>
+
+            <!-- Right Options -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp">
+
+                <Button
+                    android:id="@+id/btnCheckButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Check"
+                    android:padding="12dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File"
+                    android:padding="12dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:textColor="#000000"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Text area"
+                    android:padding="12dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:textColor="#000000"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

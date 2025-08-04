@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Top Navigation Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/topNavigationFragmentContainer"
+        android:name="com.example.lzycrazy.TopNavigationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_top_navigation" />
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Grid Section -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0dp"
+                android:columnCount="2"
+                android:useDefaultMargins="true"
+                android:alignmentMode="alignMargins"
+                android:rowOrderPreserved="false">
+
+                <!-- All Response Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_stat_card"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_response"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="400"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="All Response"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Active Add Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_stat_card"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_active_add"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="102"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Active Add"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Reported Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_stat_card"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_reported"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="098"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorGrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Reported"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Right-side Black Button -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="6dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:text="ALL DOWNLOADING"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_black_button"
+                        app:backgroundTint="@null"
+                        android:padding="12dp"/>
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- Horizontal Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="TOTAL LISTING"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/colorGrey"
+                    android:background="@drawable/bg_white_button"
+                    android:layout_marginEnd="6dp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="ADD TO PACKAGE"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/colorGrey"
+                    android:background="@drawable/bg_white_button"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- Property Image -->
+                    <ImageView
+                        android:id="@+id/imageProperty"
+                        android:layout_width="100dp"
+                        android:layout_height="138dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_property5" />
+
+                    <!-- Right Side Content -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@color/li"
+                        android:paddingStart="8dp">
+
+                        <!-- Title and Posted Date -->
+                        <TextView
+                            android:id="@+id/textTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Bedroom Appartment For Rent"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textPostedDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Posted on 1/02/2022"
+                            android:textColor="#888888"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <!-- Edit Button -->
+
+                        <!-- Contact Info and Views -->
+                        <Button
+                            android:id="@+id/btnEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#333333"
+                            android:text="Edit"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Contact Info -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textContactName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sarvesh (Indivisual)"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textPhone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+91 9578575554"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="124@gmail.com"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Views -->
+                            <TextView
+                                android:id="@+id/textViews"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="16dp"
+                                android:gravity="end"
+                                android:text="Views\n100"
+                                android:textAlignment="center"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- Property Image -->
+                    <ImageView
+                        android:id="@+id/imageProperty2"
+                        android:layout_width="100dp"
+                        android:layout_height="138dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_property4" />
+
+                    <!-- Right Side Content -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <!-- Title and Posted Date -->
+                        <TextView
+                            android:id="@+id/textTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Bedroom Appartment For Rent"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textPostedDate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Posted on 1/02/2022"
+                            android:textColor="#888888"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <!-- Edit Button -->
+
+                        <!-- Contact Info and Views -->
+                        <Button
+                            android:id="@+id/btnEdit2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#333333"
+                            android:text="Edit"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Contact Info -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textContactName2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sarvesh (Indivisual)"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textPhone2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+91 9578575554"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textEmail2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="124@gmail.com"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Views -->
+                            <TextView
+                                android:id="@+id/textViews2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="16dp"
+                                android:text="Views\n100"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- Property Image -->
+                    <ImageView
+                        android:id="@+id/imageProperty3"
+                        android:layout_width="100dp"
+                        android:layout_height="138dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sample_property3" />
+
+                    <!-- Right Side Content -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <!-- Title and Posted Date -->
+                        <TextView
+                            android:id="@+id/textTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 Bedroom Appartment For Rent"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textPostedDate3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Posted on 1/02/2022"
+                            android:textColor="#888888"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <!-- Edit Button -->
+
+                        <!-- Contact Info and Views -->
+                        <Button
+                            android:id="@+id/btnEdit3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_marginBottom="6dp"
+                            android:backgroundTint="#333333"
+                            android:text="Edit"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Contact Info -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textContactName3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sarvesh (Indivisual)"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textPhone3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+91 9578575554"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/textEmail3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="124@gmail.com"
+                                    android:textColor="#000000"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <!-- Views -->
+                            <TextView
+                                android:id="@+id/textViews3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="16dp"
+                                android:text="Views\n100"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:menu="@menu/bottom_nav_menu" />
+</LinearLayout>
