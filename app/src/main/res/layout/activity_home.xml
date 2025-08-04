@@ -1,147 +1,331 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite"
+    android:padding="16dp"
     tools:context=".HomeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- LzyCrazy Logo -->
-
-        <!-- Search Bar -->
+        <!-- Logo -->
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="225dp"
-            android:layout_height="181dp"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="LzyCrazy Logo"
-            android:src="@drawable/lzycrazy_logo" />
+            android:src="@drawable/lzycrazy_logo_icon" />
 
-        <EditText
-            android:id="@+id/searchBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:background="@drawable/input_bg_round"
-            android:drawableEnd="@drawable/icons8_search_120"
-            android:drawablePadding="12dp"
-            android:drawableTint="@color/colorGrey"
-            android:hint="Search Features"
-            android:inputType="text"
-            android:padding="12dp" />
-
-        <!-- Horizontal Buttons for Login and Signup -->
+        <!-- Search Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_white_button"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
 
-            <Button
-                android:id="@+id/loginButton"
+            <EditText
+                android:id="@+id/searchBar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/gradient_button2"
-                android:text="Login"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/signupButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@drawable/gradient_button2"
-                android:text="Sign Up"
-                app:backgroundTint="@null" />
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/icons8_search_120"
+                android:drawableTint="@color/colorGrey"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999" />
         </LinearLayout>
 
-        <!-- Menu Buttons using GridLayout -->
-        <GridLayout
-            android:id="@+id/bottomMenuLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:alignmentMode="alignMargins"
-
-            android:columnCount="2"
-            android:padding="8dp">
-
-            <Button
-                android:id="@+id/aboutUsButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:background="@drawable/rounded_white_button"
-                android:text="About Us"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/hiringButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:background="@drawable/rounded_white_button"
-                android:text="We Are Hiring"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/servicesButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:background="@drawable/rounded_white_button"
-                android:text="LzyCrazy Services"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/marketplaceButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:background="@drawable/rounded_white_button"
-                android:text="LzyCrazy Marketplace"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-
-        </GridLayout>
-        <!-- Centered last button -->
+        <!-- Button Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <Button
-                android:id="@+id/newsButton"
+            <!-- Row 1 -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="6dp"
-                android:background="@drawable/rounded_white_button"
-                android:text="LzyCrazy News"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_background"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="About Us"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/services_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_background"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="Services"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/marketplace_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_background"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="Marketplace"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/news_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/button_background"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="6dp"
+                    android:text="News"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/careers_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/button_background"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp"
+                        android:text="Careers  "
+                        android:textSize="12sp"
+                        android:textColor="#000000" />
+
+                    <!-- Red Dot -->
+                    <View
+                        android:id="@+id/red_dot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/ic_red_dot" />
+                </FrameLayout>
+            </LinearLayout>
         </LinearLayout>
 
+        <!-- Email -->
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/icons8_mail_96"
+            android:drawableTint="@color/colorGrey"
+            android:drawablePadding="8dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#999999" />
 
+        <!-- Password -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/icons8_password_96"
+            android:drawableTint="@color/colorGrey"
+            android:drawableEnd="@drawable/ic_visibility_off"
+            android:drawablePadding="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#999999" />
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Password?"
+            android:textColor="#1E88E5"
+            android:textSize="14sp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_button"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+
+        <!-- Divider -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="______________________________________________________________"
+            android:textColor="@color/LightGrey" />
+
+        <!-- Create Account -->
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_button"
+            android:paddingHorizontal="32dp"
+            android:text="Create New Account"
+            android:textColor="@android:color/white" />
+
+        <!-- Footer -->
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Country -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/flag_india" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="India"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Languages -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="LzyCrazy offered in: हिन्दी  English  বাংলা  العربية"
+                android:textAlignment="center"
+                android:textColor="#1A73E8"
+                android:textSize="14sp" />
+
+            <!-- Links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Privacy"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Terms"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help Center"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Copyright -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" @LzyCrazy Pvt Ltd, All rights reserved."
+                android:textColor="#666666"
+                android:textSize="13sp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

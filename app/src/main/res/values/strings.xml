@@ -5,6 +5,21 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="select_brand">Brand</string>
+    <string name="add_photo_icon">Add Photo Icon</string>
+
+
+    <string name="profile_image">Profile Image</string>
+    <string name="user_name">Jaahid Hasan</string>
+    <string name="friend_count">128</string>
+    <string name="friends_label">friends</string>
+    <string name="add_to_story">Add to story</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="posts">Posts</string>
+    <string name="about">About</string>
+    <string name="photos">Photos</string>
+
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -48,4 +63,26 @@
     <string name="lzycrazy_values">LzyCrazy has acquired 29 members from each state of India to provide efficient services to people.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="logo_description">LzyCrazy Logo</string>
+    <string name="search_hint">Search here...</string>
+    <string name="about_us">About Us</string>
+    <string name="services">Services</string>
+    <string name="marketplace">Marketplace</string>
+    <string name="news">News</string>
+    <string name="careers">Careers</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="divider_line">______________________________________________________________</string>
+    <string name="create_account">Create New Account</string>
+    <string name="flag_desc">Indian Flag</string>
+    <string name="country_name">India</string>
+    <string name="language_offered">LzyCrazy offered in: हिन्दी  English  বাংলা  العربية</string>
+    <string name="privacy">Privacy</string>
+    <string name="terms">Terms</string>
+    <string name="help_center">Help Center</string>
+    <string name="copyright"> @LzyCrazy Pvt Ltd, All rights reserved.</string>
+
 </resources>

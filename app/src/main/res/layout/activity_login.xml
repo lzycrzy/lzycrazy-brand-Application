@@ -44,16 +44,16 @@
                 android:id="@+id/editTextEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/input_bg"
                 android:drawableStart="@drawable/icons8_mail_96"
                 android:drawablePadding="12dp"
                 android:drawableTint="@color/colorGrey"
-                android:layout_marginTop="12dp"
                 android:hint="Email Address"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/colorGrey"/>
+                android:textColorHint="@color/colorGrey" />
 
             <EditText
                 android:id="@+id/editTextPassword"

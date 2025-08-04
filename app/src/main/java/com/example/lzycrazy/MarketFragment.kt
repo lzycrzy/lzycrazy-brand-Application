@@ -7,64 +7,53 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MarketFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MarketFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    // Declare views that will be initialized in onViewCreated
-
-    private lateinit var videoThumbnail1: ImageView // Renamed for clarity
+    private lateinit var videoThumbnail1: ImageView
     private lateinit var videoThumbnail2: ImageView
+    private lateinit var imageSlider1: ViewPager2
+    private lateinit var imageSlider2: ViewPager2
 
-    // Data for sliders - this is fine here
-    private val sliderImages1 = listOf(
-        R.drawable.slider1,
-        R.drawable.slider2,
-        R.drawable.slider3
-    )
-
-    private val sliderImages2 = listOf(
-        R.drawable.slider4,
-        R.drawable.placeholder,
-        R.drawable.placeholder
-    )
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        // This view will be passed to onViewCreated
+        // Inflate your layout
         return inflater.inflate(R.layout.fragment_market, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        videoThumbnail1 = view.findViewById(R.id.videoThumbnail) // Corrected ID usage
+        // Initialize image views
+        videoThumbnail1 = view.findViewById(R.id.videoThumbnail)
         videoThumbnail2 = view.findViewById(R.id.videoThumbnail2)
 
-        // Set click listeners
+        // Subcategory Layouts
+        val subCars = view.findViewById<View>(R.id.subcategoriesCars)
+        val subProperties = view.findViewById<View>(R.id.subcategoriesProperties)
+
+        // Category Buttons
+        val btnCars = view.findViewById<View>(R.id.btnCars)
+        val btnProperties = view.findViewById<View>(R.id.btnProperties)
+        val btnMobiles = view.findViewById<View>(R.id.btnMobiles)
+
+        // Toggle logic
+        btnCars.setOnClickListener {
+            subCars.visibility = if (subCars.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+            subProperties.visibility = View.GONE
+        }
+
+        btnProperties.setOnClickListener {
+            subProperties.visibility = if (subProperties.visibility == View.VISIBLE) View.GONE else View.VISIBLE
+            subCars.visibility = View.GONE
+        }
+
+        // Video click listeners
         videoThumbnail1.setOnClickListener {
             Toast.makeText(requireContext(), "Play video 1", Toast.LENGTH_SHORT).show()
         }
@@ -72,25 +61,15 @@ class MarketFragment : Fragment() {
         videoThumbnail2.setOnClickListener {
             Toast.makeText(requireContext(), "Play video 2", Toast.LENGTH_SHORT).show()
         }
-    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MarketFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MarketFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        imageSlider1 = view.findViewById(R.id.imageSlider1)
+        imageSlider2 = view.findViewById(R.id.imageSlider2)
+
+        val sliderImages1 = listOf(R.drawable.slider1, R.drawable.slider2, R.drawable.slider3)
+        val sliderImages2 = listOf(R.drawable.slider4, R.drawable.placeholder, R.drawable.placeholder)
+
+        imageSlider1.adapter = ImageSliderAdapter(sliderImages1)
+        imageSlider2.adapter = ImageSliderAdapter(sliderImages2)
+
     }
 }
