@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:radius="16dp">
+
+    <!-- Close Button (cross icon) -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="close_dialog"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <!-- Message Text -->
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="Please sign in to chat with seller"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:elevation="4dp"
+        android:text="Login"
+        android:textColor="@android:color/white" />
+</LinearLayout>

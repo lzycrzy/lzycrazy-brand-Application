@@ -1,0 +1,11 @@
+<com.google.android.material.imageview.ShapeableImageView android:id="@+id/ivBannerImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:adjustViewBounds="true"
+    android:scaleType="fitCenter"
+    android:contentDescription="Banner image"
+    android:src="@drawable/ic_real_estate_banner"
+    app:shapeAppearanceOverlay="@style/RoundedImageStyle"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

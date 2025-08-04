@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Category Icon -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCategoryIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Category Icon"
+        android:src="@drawable/ic_real_estate"
+        app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+    <!-- Category Name -->
+    <TextView
+        android:id="@+id/tvCategoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category Name"
+        android:textSize="14sp"
+        android:textColor="#111"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <!-- Subcategory List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSubCategoryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingTop="2dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:background="#DDDDDD" />
+</LinearLayout>

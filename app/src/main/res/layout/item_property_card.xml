@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/sample_property3" />
+            android:src="@drawable/ic_sample_property_2" />
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -2,16 +2,30 @@ package com.example.lzycrazy
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.lzycrazy.auth.ApiClient
+import com.example.lzycrazy.auth.ForgotPasswordActivity
+import com.example.lzycrazy.auth.LoginRequest
+import com.example.lzycrazy.auth.LoginResponse
+import com.example.lzycrazy.auth.SignupActivity
+import com.example.lzycrazy.withoutlogin.careers.ApplicationDialogFragment
+import com.example.lzycrazy.withoutlogin.marketplace.MarketplaceActivity
+import com.example.lzycrazy.withoutlogin.services.ServicesActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeActivity : AppCompatActivity() {
+
+class HomeActivity : AppCompatActivity(),
+    EmailDialogFragment.DialogListener,
+    ApplicationDialogFragment.DialogListener,
+    TasksDialogFragment.DialogListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -21,10 +35,12 @@ class HomeActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.loginButton)
         val createAccountButton = findViewById<Button>(R.id.createAccountButton)
         val forgotPasswordText = findViewById<TextView>(R.id.forgotPasswordText)
+
+
         val aboutUsButton = findViewById<Button>(R.id.aboutUsButton)
         val careersButton = findViewById<Button>(R.id.careersButton)
         val servicesButton = findViewById<Button>(R.id.servicesButton)
-
+        val marketplaceButton = findViewById<Button>(R.id.marketplaceButton)
         val newsButton = findViewById<Button>(R.id.newsButton)
 
         loginButton.setOnClickListener {
@@ -74,16 +90,63 @@ class HomeActivity : AppCompatActivity() {
         }
 
         careersButton.setOnClickListener {
-            startActivity(Intent(this, HiringActivity::class.java))
+            showEmailDialogForCareers()
         }
 
         servicesButton.setOnClickListener {
             startActivity(Intent(this, ServicesActivity::class.java))
         }
 
+        marketplaceButton.setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
+        }
 
         newsButton.setOnClickListener {
             startActivity(Intent(this, NewsActivity::class.java))
         }
     }
+
+    private fun showEmailDialogForCareers() {
+        val dialog = EmailDialogFragment()
+        dialog.show(supportFragmentManager, "email_dialog_careers")
+    }
+
+    override fun onEmailSubmitted(email: String) {
+        openApplicationForm(email)
+    }
+
+    private fun openApplicationForm(email: String) {
+        val dialog = ApplicationDialogFragment().apply {
+            arguments = Bundle().apply {
+                putString("email", email)
+            }
+        }
+        dialog.show(supportFragmentManager, "application_dialog_careers")
+    }
+
+    override fun onBackToLoginRequested() {
+        Toast.makeText(this, "Application cancelled.", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onApplicationSubmitted(data: Map<String, String>) {
+        Toast.makeText(this, "Application data received, proceeding to task selection.", Toast.LENGTH_LONG).show()
+        Log.d("HomeActivity", "Application Data for Careers: $data")
+        openTasksDialog()
+    }
+
+    private fun openTasksDialog() {
+        val dialog = TasksDialogFragment()
+        dialog.show(supportFragmentManager, "tasks_dialog_careers")
+    }
+
+    override fun onTasksSubmitted(selectedShift: String) {
+        Log.d("HomeActivity", "Selected Shift for Careers: $selectedShift")
+        openSuccessDialog()
+    }
+
+    private fun openSuccessDialog() {
+        val dialog = SuccessDialogFragment()
+        dialog.show(supportFragmentManager, "success_dialog_careers")
+    }
 }
+
