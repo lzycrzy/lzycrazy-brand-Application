@@ -18,9 +18,9 @@ class HomeFragment : Fragment() {
     private var param2: String? = null
 
     private lateinit var recyclerViewStories: RecyclerView
-    private lateinit var storiesAdapter: RecyclerView.Adapter<*> // Use a more specific type if possible
+    private lateinit var storiesAdapter: RecyclerView.Adapter<*>
     private lateinit var recyclerViewPost: RecyclerView
-    private lateinit var postsAdapter: RecyclerView.Adapter<*> // Use a more specific type if possible
+    private lateinit var postsAdapter: RecyclerView.Adapter<*>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +35,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 

@@ -32,7 +32,7 @@ class AboutFragment : Fragment() {
             AboutItem(R.drawable.ic_website, "Website / Portfolio", "www.zeeshanportfolio.com"),
             AboutItem(R.drawable.ic_blood, "Blood Group", "B+"),
             AboutItem(R.drawable.ic_hobby, "Hobbies / Interests", "UI/UX Design, Photography, Music"),
-            AboutItem(R.drawable.ic_location, "Location / City", "Kashipur, Uttarakhand"),
+            AboutItem(R.drawable.ic_location1, "Location / City", "Kashipur, Uttarakhand"),
             AboutItem(R.drawable.ic_dob, "Date of Birth", "15 March 2001"),
             AboutItem(R.drawable.ic_work, "Profession / Occupation", "UI/UX Designer & Web Developer")
         )

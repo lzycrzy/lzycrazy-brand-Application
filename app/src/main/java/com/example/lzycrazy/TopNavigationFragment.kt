@@ -41,12 +41,12 @@ class TopNavigationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val plusButton = view.findViewById<ImageView>(R.id.plusButton)
-
-        plusButton.setOnClickListener {
-            val dialog = ChooseCategoryDialog()
-            dialog.show(parentFragmentManager, "ChooseCategoryDialog")
-        }
+//        val plusButton = view.findViewById<ImageView>(R.id.plusButton)
+//
+//        plusButton.setOnClickListener {
+//            val dialog = ChooseCategoryDialog()
+//            dialog.show(parentFragmentManager, "ChooseCategoryDialog")
+//        }
     }
 }
 

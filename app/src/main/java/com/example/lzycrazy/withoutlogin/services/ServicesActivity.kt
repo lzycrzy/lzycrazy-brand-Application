@@ -28,25 +28,28 @@ class ServicesActivity : AppCompatActivity() {
 
     private fun fetchServices() {
         RetrofitInstance.api.getServices()
-            .enqueue(object : Callback<List<ServicesAdapterItem>> {
+            .enqueue(object : Callback<ServicesResponse> {
                 override fun onResponse(
-                    call: Call<List<ServicesAdapterItem>>,
-                    response: Response<List<ServicesAdapterItem>>
+                    call: Call<ServicesResponse>,
+                    response: Response<ServicesResponse>
                 ) {
                     if (response.isSuccessful && response.body() != null) {
-                        val services = response.body()!!
+                        val services = response.body()!!.data
+                        Log.d("API_SUCCESS", "Received ${services.size} items")
+
                         adapter = ServicesAdapter(services)
                         recyclerView.adapter = adapter
                     } else {
-                        Log.e("API_ERROR", "Response failed")
+                        Log.e("API_ERROR", "Response failed or empty")
                     }
                 }
 
-                override fun onFailure(call: Call<List<ServicesAdapterItem>>, t: Throwable) {
+                override fun onFailure(call: Call<ServicesResponse>, t: Throwable) {
                     Log.e("API_ERROR", "Network call failed: ${t.message}")
                 }
             })
     }
+
 
 
 }

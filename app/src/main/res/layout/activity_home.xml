@@ -1,331 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite"
-    android:orientation="vertical"
-    android:paddingStart="16dp"
-    android:paddingTop="8dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="8dp"
-    tools:context=".HomeActivity">
-
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="174dp"
-        android:layout_height="68dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:contentDescription="LzyCrazy Logo"
-        android:src="@drawable/lzycrazy_logo" />
+    android:padding="16dp"
+    tools:context=".HomeActivity"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rounded_white_button"
-        android:orientation="horizontal"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="8dp">
-
-        <EditText
-            android:id="@+id/searchBar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:drawableEnd="@drawable/icons8_search_120"
-            android:drawableTint="@color/colorGrey"
-            android:hint="Search here..."
-            android:inputType="text"
-            android:minHeight="40dp"
-            android:paddingStart="8dp"
-            android:textColor="@color/black"
-            android:textColorHint="#999999" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingStart="8dp"
-            android:paddingEnd="16dp">
-
-            <Button
-                android:id="@+id/aboutUsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_input_bg"
-                android:elevation="4dp"
-                android:minWidth="0dp"
-                android:paddingHorizontal="20dp"
-                android:text="About Us"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/servicesButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_input_bg"
-                android:elevation="4dp"
-                android:minWidth="0dp"
-                android:paddingHorizontal="20dp"
-                android:text="LzyCrazy Services"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
-            android:gravity="center">
-
-            <Button
-                android:id="@+id/marketplaceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_input_bg"
-                android:elevation="4dp"
-                android:minWidth="0dp"
-                android:paddingHorizontal="24dp"
-                android:text="LzyCrazy Marketplace"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp">
-
-            <Button
-                android:id="@+id/newsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_input_bg"
-                android:elevation="4dp"
-                android:minWidth="0dp"
-                android:paddingHorizontal="20dp"
-                android:text="LzyCrazy News"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-
-            <Button
-                android:id="@+id/careersButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_input_bg"
-                android:drawableEnd="@drawable/ic_red_dot"
-                android:elevation="4dp"
-                android:minWidth="0dp"
-                android:paddingHorizontal="20dp"
-                android:text="Careers"
-                android:textColor="@android:color/black"
-                app:backgroundTint="@null" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/editTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rounded_edittext"
-        android:drawableStart="@drawable/icons8_mail_96"
-        android:drawablePadding="12dp"
-        android:drawableTint="@color/colorGrey"
-        android:hint="Email Address"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="#999999" />
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext"
-        android:drawableStart="@drawable/icons8_password_96"
-        android:drawableEnd="@drawable/ic_visibility_off"
-        android:drawablePadding="12dp"
-        android:drawableTint="@color/colorGrey"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:padding="12dp"
-        android:textColor="@color/black"
-        android:textColorHint="#999999" />
-
-    <TextView
-        android:id="@+id/forgotPasswordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:minHeight="48dp"
-        android:paddingStart="8dp"
-        android:paddingTop="2dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="2dp"
-        android:text="Forgot Password?"
-        android:textColor="#1E88E5"
-        android:textSize="14sp" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/gradient_button"
-        android:minHeight="48dp"
-        android:text="Login"
-        android:textColor="@android:color/white"
-        app:backgroundTint="@null" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="----- or -----"
-        android:textColor="#999999"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/createAccountButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/gradient_button"
-        android:minHeight="48dp"
-        android:paddingHorizontal="32dp"
-        android:text="Create New Account"
-        android:textColor="@android:color/white"
-        app:backgroundTint="@null" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
+        <!-- Logo -->
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="16dp"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="India Flag"
-            android:src="@drawable/flag_india" />
+            android:id="@+id/logoImageView"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:contentDescription="LzyCrazy Logo"
+            android:src="@drawable/lzycrazy_logo_icon" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="|"
-            android:textColor="#999999"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:text="Also offered in:"
-            android:textColor="#666666"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="हिन्दी"
-            android:textColor="#1E88E5"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="English"
-            android:textColor="#1E88E5"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="বাংলা"
-            android:textColor="#1E88E5"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="العربية"
-            android:textColor="#1E88E5"
-            android:textSize="14sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:baselineAligned="false"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text=" @LzyCrazy Pvt Ltd, All right reserved."
-            android:textAlignment="viewStart"
-            android:textColor="#666666"
-            android:textSize="12sp" />
-
+        <!-- Search Bar -->
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_white_button"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/icons8_search_120"
+                android:drawableTint="@color/colorGrey"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999" />
+        </LinearLayout>
+
+        <!-- Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/about_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/home_button_background"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="About Us"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/services_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/home_button_background"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="Services"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/marketplace_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:layout_marginEnd="6dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/home_button_background"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="Marketplace"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/news_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/home_button_background"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="6dp"
+                    android:text="News"
+                    android:textSize="12sp"
+                    android:textColor="#000000" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="6dp">
+
+                    <Button
+                        android:id="@+id/careers_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="6dp"
+                        app:backgroundTint="@null"
+                        android:background="@drawable/home_button_background"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp"
+                        android:text="Careers  "
+                        android:textSize="12sp"
+                        android:textColor="#000000" />
+
+                    <!-- Red Dot -->
+                    <View
+                        android:id="@+id/red_dot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/ic_red_dot" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/editTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/icons8_mail_96"
+            android:drawableTint="@color/colorGrey"
+            android:drawablePadding="8dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#999999" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableStart="@drawable/icons8_password_96"
+            android:drawableTint="@color/colorGrey"
+            android:drawableEnd="@drawable/ic_visibility_off"
+            android:drawablePadding="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="#999999" />
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgotPasswordText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Password?"
+            android:textColor="#1E88E5"
+            android:textSize="14sp" />
 
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_button"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+
+        <!-- Divider -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text=""
+            android:textColor="@color/LightGrey" />
+
+        <!-- Create Account -->
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            app:backgroundTint="@null"
+            android:background="@drawable/gradient_button"
+            android:paddingHorizontal="32dp"
+            android:text="Create New Account"
+            android:textColor="@android:color/white" />
+
+        <!-- Footer -->
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginTop="24dp">
+
+            <!-- Country -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/flag_india" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="India"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Languages -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="Privacy"
-                android:textColor="#1E88E5"
-                android:textSize="12sp" />
+                android:layout_marginBottom="12dp"
+                android:text="LzyCrazy offered in: हिन्दी  English  বাংলা  العربية"
+                android:textAlignment="center"
+                android:textColor="#1A73E8"
+                android:textSize="14sp" />
 
+            <!-- Links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Privacy"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Terms"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help Center"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Copyright -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Terms"
-                android:textColor="#1E88E5"
-                android:textSize="12sp" />
+                android:text=" @LzyCrazy Pvt Ltd, All rights reserved."
+                android:textColor="#666666"
+                android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

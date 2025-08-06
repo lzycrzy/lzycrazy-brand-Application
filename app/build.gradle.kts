@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android") version "2.2.0"
+    id("kotlin-parcelize")
 }
 
 android {
@@ -47,6 +48,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("com.google.android.material:material:1.12.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 
     // Retrofit and OkHttp
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
@@ -70,6 +72,7 @@ dependencies {
     // AR and graphics
     //noinspection Aligned16KB
     implementation("com.google.ar.sceneform:filament-android:1.17.1")
+    implementation("com.google.android.gms:play-services-maps:19.2.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

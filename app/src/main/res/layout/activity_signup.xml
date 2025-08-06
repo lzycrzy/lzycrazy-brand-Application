@@ -1,36 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
-
+    android:background="@color/colorWhite"
+    android:padding="16dp"
+    android:scrollbars="none"
+    tools:context=".HomeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:background="@android:color/white"
-        android:elevation="4dp"
-        android:orientation="vertical"
-        android:padding="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
+        <!-- Logo -->
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="wrap_content"
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:contentDescription="LzyCrazy Logo"
+            android:src="@drawable/lzycrazy_logo_icon" />
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:contentDescription="LzyCrazy Logo"
-            android:src="@drawable/lzycrazy_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/rounded_white_button"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/icons8_search_120"
+                android:drawableTint="@color/colorGrey"
+                android:hint="Search here..."
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#999999" />
+        </LinearLayout>
+
+        <!-- Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/home_button_background"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="About Us"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/services_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/home_button_background"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="6dp"
+                    android:text="Services"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/marketplace_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/home_button_background"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:text="Marketplace"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null" />
+
+
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/news_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_button_background"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="6dp"
+                    android:text="News"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="6dp">
+
+                    <Button
+                        android:id="@+id/careers_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/home_button_background"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="6dp"
+                        android:text="Careers  "
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:backgroundTint="@null" />
+
+                    <!-- Red Dot -->
+                    <View
+                        android:id="@+id/red_dot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/ic_red_dot" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
 
 
         <!-- Full Name -->
@@ -38,7 +175,10 @@
             android:id="@+id/editTextFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/input_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_edittext"
             android:drawableStart="@drawable/baseline_person_outline_24"
             android:drawablePadding="12dp"
             android:drawableTint="@color/colorGrey"
@@ -56,11 +196,13 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <!-- Country Code Picker with flag -->
             <com.hbb20.CountryCodePicker
                 android:id="@+id/ccp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rounded_edittext"
                 app:ccp_autoDetectCountry="true"
                 app:ccp_defaultNameCode="IN"
                 app:ccp_showFlag="true"
@@ -68,79 +210,81 @@
                 app:ccp_showNameCode="false"
                 app:ccp_showPhoneCode="true" />
 
-            <!-- Phone number field -->
             <EditText
                 android:id="@+id/editTextPhone"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="66dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="13dp"
                 android:layout_weight="1"
-                android:background="@drawable/input_bg"
+                android:background="@drawable/rounded_edittext"
                 android:hint="Phone Number"
                 android:inputType="phone"
+                android:minHeight="48dp"
                 android:padding="12dp"
-                android:minHeight="48dp" />
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorGrey" />
         </LinearLayout>
-
-
 
         <!-- Email -->
         <EditText
             android:id="@+id/editTextEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/input_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_edittext"
             android:drawableStart="@drawable/icons8_mail_96"
             android:drawablePadding="12dp"
             android:drawableTint="@color/colorGrey"
-            android:layout_marginTop="12dp"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
             android:padding="12dp"
             android:textColor="@color/black"
-            android:textColorHint="@color/colorGrey"/>
+            android:textColorHint="@color/colorGrey" />
 
         <!-- Password -->
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/input_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_edittext"
             android:drawableStart="@drawable/icons8_password_96"
             android:drawablePadding="12dp"
             android:drawableTint="@color/colorGrey"
-            android:textColor="@color/black"
-            android:textColorHint="@color/colorGrey"
-            android:layout_marginTop="12dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:padding="12dp" />
-
-        <!-- Info -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="We may use your contact information to improve your experience. Learn more"
-            android:textSize="12sp" />
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGrey" />
 
         <!-- Terms -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
             android:text="By clicking Sign Up, you agree to our Terms of Service, Privacy Policy, and Cookies Policy"
+            android:textColor="@color/colorGrey"
             android:textSize="12sp" />
 
         <!-- Sign Up Button -->
         <Button
             android:id="@+id/signUpButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
-            app:backgroundTint="@null"
+            android:layout_marginRight="10dp"
             android:background="@drawable/gradient_button"
             android:text="Sign Up"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null" />
 
         <!-- Already have account -->
         <TextView
@@ -151,6 +295,92 @@
             android:gravity="center"
             android:text="Already have an account?"
             android:textColor="@android:color/holo_blue_dark" />
+
+        <!-- Footer -->
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Country -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:src="@drawable/flag_india" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="India"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Languages -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="LzyCrazy offered in: हिन्दी  English  বাংলা  العربية"
+                android:textAlignment="center"
+                android:textColor="#1A73E8"
+                android:textSize="14sp" />
+
+            <!-- Links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Privacy"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="Terms"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help Center"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Copyright -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" @LzyCrazy Pvt Ltd, All rights reserved."
+                android:textColor="#666666"
+                android:textSize="13sp" />
+        </LinearLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

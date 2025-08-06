@@ -53,11 +53,11 @@
             android:exported="false" />
 
         <activity
-            android:name=".NewsActivity"
+            android:name=".withoutlogin.NewsActivity"
             android:exported="false" />
 
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".withoutlogin.AboutUsActivity"
             android:exported="false"
             android:theme="@style/Theme.LzyCrazy" />
 

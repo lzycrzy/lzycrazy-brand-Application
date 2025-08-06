@@ -20,8 +20,8 @@ class HomeScreenActivity : AppCompatActivity() {
                 R.id.nav_media -> replaceWithFragment(ReelsFragment())
 
                 // changed it to test the property listing for now
-                R.id.nav_shop -> replaceWithFragment(MarketplacePropertyAgentFragment())
-//              R.id.nav_shop -> replaceWithFragment(MarketFragment())
+//                R.id.nav_shop -> replaceWithFragment(MarketplacePropertyAgentFragment())
+                R.id.nav_shop -> replaceWithFragment(MarketFragment())
                 R.id.nav_notification -> replaceWithFragment(AlertsFragment())
                 R.id.nav_profile -> replaceWithFragment(ProfileFragment())
             }

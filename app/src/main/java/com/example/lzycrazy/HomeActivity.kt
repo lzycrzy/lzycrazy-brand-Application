@@ -13,13 +13,14 @@ import com.example.lzycrazy.auth.ForgotPasswordActivity
 import com.example.lzycrazy.auth.LoginRequest
 import com.example.lzycrazy.auth.LoginResponse
 import com.example.lzycrazy.auth.SignupActivity
+import com.example.lzycrazy.withoutlogin.AboutUsActivity
+import com.example.lzycrazy.withoutlogin.NewsActivity
 import com.example.lzycrazy.withoutlogin.careers.ApplicationDialogFragment
 import com.example.lzycrazy.withoutlogin.marketplace.MarketplaceActivity
 import com.example.lzycrazy.withoutlogin.services.ServicesActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
 
 class HomeActivity : AppCompatActivity(),
     EmailDialogFragment.DialogListener,
@@ -30,18 +31,19 @@ class HomeActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        // Keep IDs from the first version
         val emailEditText = findViewById<EditText>(R.id.editTextEmailAddress)
         val passwordEditText = findViewById<EditText>(R.id.editTextPassword)
         val loginButton = findViewById<Button>(R.id.loginButton)
         val createAccountButton = findViewById<Button>(R.id.createAccountButton)
         val forgotPasswordText = findViewById<TextView>(R.id.forgotPasswordText)
+        val aboutUsButton = findViewById<Button>(R.id.about_button)
+        val careersButton = findViewById<Button>(R.id.careers_button)
+        val servicesButton = findViewById<Button>(R.id.services_button)
+        val newsButton = findViewById<Button>(R.id.news_button)
 
-
-        val aboutUsButton = findViewById<Button>(R.id.aboutUsButton)
-        val careersButton = findViewById<Button>(R.id.careersButton)
-        val servicesButton = findViewById<Button>(R.id.servicesButton)
-        val marketplaceButton = findViewById<Button>(R.id.marketplaceButton)
-        val newsButton = findViewById<Button>(R.id.newsButton)
+        // Additional button from second version
+        val marketplaceButton = findViewById<Button>(R.id.marketplace_button)
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
@@ -60,19 +62,16 @@ class HomeActivity : AppCompatActivity(),
                     response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful) {
-                        Toast.makeText(this@HomeActivity, "Login Successful", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@HomeActivity, "Login Successful", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@HomeActivity, HomeScreenActivity::class.java))
                         finish()
                     } else {
-                        Toast.makeText(this@HomeActivity, "Invalid credentials", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(this@HomeActivity, "Invalid credentials", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                    Toast.makeText(this@HomeActivity, "Login failed: ${t.message}", Toast.LENGTH_LONG)
-                        .show()
+                    Toast.makeText(this@HomeActivity, "Login failed: ${t.message}", Toast.LENGTH_LONG).show()
                 }
             })
         }
@@ -97,12 +96,12 @@ class HomeActivity : AppCompatActivity(),
             startActivity(Intent(this, ServicesActivity::class.java))
         }
 
-        marketplaceButton.setOnClickListener {
-            startActivity(Intent(this, MarketplaceActivity::class.java))
-        }
-
         newsButton.setOnClickListener {
             startActivity(Intent(this, NewsActivity::class.java))
+        }
+
+        marketplaceButton?.setOnClickListener {
+            startActivity(Intent(this, MarketplaceActivity::class.java))
         }
     }
 
@@ -149,4 +148,3 @@ class HomeActivity : AppCompatActivity(),
         dialog.show(supportFragmentManager, "success_dialog_careers")
     }
 }
-

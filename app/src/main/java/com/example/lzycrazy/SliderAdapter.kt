@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class SliderAdapter(private val images: List<Int>) : RecyclerView.Adapter<SliderAdapter.SliderViewHolder>() {
 
     inner class SliderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val imageView: ImageView = view.findViewById(R.id.sliderImageView)
+        val imageView: ImageView = view.findViewById(R.id.sliderImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderViewHolder {
