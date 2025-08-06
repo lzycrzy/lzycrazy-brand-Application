@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android") version "2.2.0"
+    id("kotlin-parcelize")
 }
 
 android {
@@ -60,6 +61,7 @@ dependencies {
     implementation("com.hbb20:ccp:2.7.3")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 
     // AR and graphics
     implementation("com.google.ar.sceneform:filament-android:1.17.1")

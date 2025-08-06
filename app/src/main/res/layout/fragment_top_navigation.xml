@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!-- Top Navigation Bar -->
@@ -17,68 +18,39 @@
         <!-- App Icon -->
         <ImageView
             android:id="@+id/appIcon"
-            android:layout_width="42dp"
+            android:layout_width="59dp"
             android:layout_height="42dp"
             android:contentDescription="app_icon"
             android:src="@drawable/lzycrazy_logo_home_screen" />
 
-        <!-- Spacer -->
+        <!-- Flexible Spacer -->
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- Icon style group: use background drawable and padding -->
+        <!-- Bell Icon -->
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
+            android:background="@color/colorWhite"
             android:padding="4dp">
 
             <ImageView
-                android:id="@+id/searchIcon"
+                android:id="@+id/bellIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="search"
-                android:src="@drawable/search_icon" />
+                android:contentDescription="bell"
+                android:src="@drawable/ic_bell_fragment_top_navigation" />
         </FrameLayout>
 
+        <!-- Message Icon -->
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
-            android:padding="4dp">
-
-            <ImageView
-                android:id="@+id/plusIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="add"
-                android:src="@drawable/plus_icon" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
-            android:padding="4dp">
-
-            <ImageView
-                android:id="@+id/storeIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="store"
-                android:src="@drawable/app_store_icon" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
+            android:background="@color/colorWhite"
             android:padding="4dp">
 
             <ImageView
@@ -86,42 +58,30 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:contentDescription="message"
-                android:src="@drawable/message_icon" />
+                android:src="@drawable/ic_message_fragment_top_navigation" />
         </FrameLayout>
 
+        <!-- Profile Icon -->
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
+            android:background="@color/colorWhite"
             android:padding="4dp">
 
-            <ImageView
-                android:id="@+id/cartIcon"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="cart"
-                android:src="@drawable/cart_icon" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@drawable/icon_background"
-            android:padding="4dp">
-
-            <ImageView
-                android:id="@+id/menuIcon"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="menu"
-                android:src="@drawable/menu_bar_icon" />
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile_fragment_top_navigation" />
         </FrameLayout>
 
     </LinearLayout>
 
-    <!-- Full-width Divider (this will span the screen width) -->
+    <!-- Full-width Divider -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

@@ -11,7 +11,7 @@ import com.google.android.material.imageview.ShapeableImageView
 
 class BannerAdapter(
     private var marketPosts: List<Any>,
-    private val onItemClick: (Any) -> Unit // Add click listener parameter
+    private val onItemClick: (Any) -> Unit
 ) : RecyclerView.Adapter<BannerAdapter.BannerViewHolder>() {
 
     companion object {

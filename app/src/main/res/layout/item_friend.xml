@@ -63,6 +63,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_more_vert"
+        android:src="@drawable/ic_more_horizontal"
         android:contentDescription="More options" />
 </LinearLayout>
