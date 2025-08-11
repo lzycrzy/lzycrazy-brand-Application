@@ -1,52 +1,64 @@
 package com.example.lzycrazy
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.PopupWindow
+import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TopNavigationFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TopNavigationFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top_navigation, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_top_navigation, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val profileImageView = view.findViewById<ImageView>(R.id.profile_image)
 
-        val plusButton = view.findViewById<ImageView>(R.id.plusButton)
+        profileImageView.setOnClickListener {
+            val popupView = LayoutInflater.from(requireContext())
+                .inflate(R.layout.layout_profile_popup, null)
 
-        plusButton.setOnClickListener {
-            val dialog = ChooseCategoryDialog()
-            dialog.show(parentFragmentManager, "ChooseCategoryDialog")
+            val popupUserName = popupView.findViewById<TextView>(R.id.tvName)
+            val popupUserEmail = popupView.findViewById<TextView>(R.id.tvEmail)
+            val popupUserId = popupView.findViewById<TextView>(R.id.tvId)
+            val signOutButton = popupView.findViewById<Button>(R.id.signUpButton)
+
+            // Set user details (replace with real user data)
+            popupUserName.text = "Name"
+            popupUserId.text = "ID: Lc1"
+            popupUserEmail.text = "lzycrazy@example.com"
+
+            val popupWindow = PopupWindow(
+                popupView,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                true
+            )
+
+            popupWindow.elevation = 10f
+            popupWindow.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            popupWindow.isOutsideTouchable = true
+
+            // Show below the profile image (anchored position)
+            popupWindow.showAsDropDown(profileImageView, -50, 20)
+
+            signOutButton.setOnClickListener {
+                popupWindow.dismiss()
+                Toast.makeText(requireContext(), "Sign out", Toast.LENGTH_SHORT).show()
+            }
         }
+
+        return view
     }
 }
-

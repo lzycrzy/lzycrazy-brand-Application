@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivSubCategoryIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="Subcategory Image"
+        android:src="@drawable/ic_real_estate"
+        app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+    <TextView
+        android:id="@+id/tvSubCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subcategory"
+        android:textSize="13sp"
+        android:textColor="#444"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+</LinearLayout>

@@ -238,7 +238,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:background="@color/li"
                         android:paddingStart="8dp">
 
                         <!-- Title and Posted Date -->

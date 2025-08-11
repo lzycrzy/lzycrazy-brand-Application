@@ -1,80 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawerLayout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical"
+    tools:context=".withoutlogin.marketplace.MarketplaceActivity">
 
-    <!-- Main Content -->
+    <!-- Horizontal content area -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="100">
 
-        <!-- Top Bar -->
+        <!-- Category List (30%) with Title -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="8dp"
-            android:background="#FFFFFF">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="vertical"
+            android:background="#F9F9F9">
 
-            <EditText
-                android:id="@+id/searchBar2"
-                android:layout_width="0dp"
-                android:layout_height="59dp"
+            <!-- Centered Title -->
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp"
+                android:text="Categories"
+                android:textColor="#333"
+                android:textSize="12sp" />
+
+            <!-- Category RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategoryList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="@drawable/input_bg_round"
-                android:drawableEnd="@drawable/icons8_search_120"
-                android:drawablePadding="12dp"
-                android:drawableTint="@color/colorGrey"
-                android:hint="Search..."
-                android:padding="12dp"
-                android:inputType="text"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:src="@drawable/icons8_bell_96"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="12dp" />
-
-            <ImageView
-                android:src="@drawable/icons8_add_100"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="12dp" />
+                android:clipToPadding="false"
+                android:padding="0dp"
+                tools:listitem="@layout/item_category" />
         </LinearLayout>
 
-        <!-- ZyCrazy Logo -->
-        <ImageView
-            android:id="@+id/logoImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/lzycrazy_logo"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:padding="8dp" />
+        <!-- Banner List / Empty View (70%) -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:padding="8dp">
 
-        <!-- Expandable Categories -->
-        <ExpandableListView
-            android:id="@+id/expandableListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="0.5dp"
-            android:groupIndicator="@null" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBannerList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_property_banner" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="There is no listing for this type of category"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </FrameLayout>
     </LinearLayout>
-
-    <!-- Sidebar Navigation Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/sidebar_menu"
-        android:background="#F8F8F8" />
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

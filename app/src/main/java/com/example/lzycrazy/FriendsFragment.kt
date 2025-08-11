@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 class FriendsFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: FriendAdapter
-    private val friendList = listOf(
-        Friend("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
-        Friend("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
-        Friend("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
-        Friend("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India")
+    private lateinit var adapter: FriendAdapter1
+    private val friendList1 = listOf(
+        Friend1("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
+        Friend1("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
+        Friend1("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India"),
+        Friend1("Zeeshu Ali", "58 mutual friends, including Zeeshan Shareef and Moin Kassar", "Lives in Delhi, India")
     )
 
     override fun onCreateView(
@@ -26,7 +26,7 @@ class FriendsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_friends, container, false)
         recyclerView = view.findViewById(R.id.friendsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        adapter = FriendAdapter(friendList)
+        adapter = FriendAdapter1(friendList1)
         recyclerView.adapter = adapter
         return view
     }
