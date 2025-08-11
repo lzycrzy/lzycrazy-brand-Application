@@ -7,8 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FriendAdapter(private val friendList: List<Friend>) :
-    RecyclerView.Adapter<FriendAdapter.FriendViewHolder>() {
+class FriendAdapter1(private val friendList1: List<Friend1>) :
+    RecyclerView.Adapter<FriendAdapter1.FriendViewHolder>() {
 
     inner class FriendViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvName: TextView = itemView.findViewById(R.id.tvName)
@@ -25,12 +25,12 @@ class FriendAdapter(private val friendList: List<Friend>) :
     }
 
     override fun onBindViewHolder(holder: FriendViewHolder, position: Int) {
-        val friend = friendList[position]
+        val friend = friendList1[position]
         holder.tvName.text = friend.name
         holder.tvMutual.text = friend.mutualFriends
         holder.tvLocation.text = friend.location
         // Handle clicks if needed
     }
 
-    override fun getItemCount(): Int = friendList.size
+    override fun getItemCount(): Int = friendList1.size
 }

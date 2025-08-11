@@ -3,15 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lzycrazy">
 
-    <!-- Internet permission -->
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32"/>
-
-
 
     <application
         android:allowBackup="true"
@@ -25,34 +18,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
-        <activity
-            android:name=".ForgotPasswordActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".HomeScreenActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".ServicesActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".HiringActivity"
-            android:exported="false" />
-
-
-
-        <activity
-            android:name=".NewsActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".AboutUsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.LzyCrazy" />
-
-
         <!-- Splash screen: App splash Screen -->
         <activity
             android:name=".SplashActivity"
@@ -64,14 +29,41 @@
         </activity>
 
         <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
-
-
-        <activity
             android:name=".HomeActivity"
             android:exported="true" />
 
-    </application>
+        <activity
+            android:name=".auth.SignupActivity"
+            android:exported="false" />
 
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.marketplace.MarketplaceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.NewsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.AboutUsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LzyCrazy" />
+
+        <activity
+            android:name=".withoutlogin.services.ServicesActivity"
+            android:exported="false" />
+
+    </application>
 </manifest>

@@ -50,7 +50,7 @@
                 android:src="@drawable/ic_profile_placeholder"
                 android:scaleType="centerCrop"
                 android:background="@drawable/circle_background"
-                android:contentDescription="@string/profile_image"
+                android:contentDescription="profile_image"
                 android:clipToOutline="true" />
 
             <ImageView
