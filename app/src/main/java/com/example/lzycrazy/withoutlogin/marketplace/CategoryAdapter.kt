@@ -10,7 +10,6 @@ import com.bumptech.glide.Glide
 import com.example.lzycrazy.R
 import com.example.lzycrazy.withoutlogin.marketplace.SubCategoryAdapter
 import com.google.android.material.imageview.ShapeableImageView
-
 class CategoryAdapter(
     private val list: List<Category>,
     private val onCategoryClicked: (Category) -> Unit,
@@ -34,28 +33,33 @@ class CategoryAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val category = list[position]
 
+        // Bind category name and icon
         holder.name.text = category.name
         Glide.with(holder.icon.context)
             .load(category.imageData.url)
             .placeholder(R.drawable.ic_real_estate)
             .into(holder.icon)
 
+        // Expand/collapse subcategories
         val isExpanded = position == expandedPosition
         holder.subCategoryList.visibility = if (isExpanded) View.VISIBLE else View.GONE
 
-        // Setup subcategory adapter with click listener
+        // Setup subcategory list
         holder.subCategoryList.layoutManager = LinearLayoutManager(holder.itemView.context)
         holder.subCategoryList.adapter = SubCategoryAdapter(category.subcategories) { subcategory ->
             onSubCategoryClicked(category._id, subcategory.name)
         }
 
         holder.itemView.setOnClickListener {
-            val prevExpanded = expandedPosition
-            expandedPosition = if (isExpanded) -1 else position
-            notifyItemChanged(prevExpanded)
+            val previousExpandedPosition = expandedPosition
+            val wasExpanded = isExpanded
+
+            expandedPosition = if (wasExpanded) -1 else position
+            notifyItemChanged(previousExpandedPosition)
             notifyItemChanged(position)
 
-            if (!isExpanded) {
+            // Only trigger onCategoryClicked if a new category is being expanded
+            if (!wasExpanded) {
                 onCategoryClicked(category)
             }
         }

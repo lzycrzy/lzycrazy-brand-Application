@@ -14,12 +14,12 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
-
 class MarketplaceActivity : AppCompatActivity() {
 
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var bannerAdapter: BannerAdapter
     private lateinit var tvEmpty: TextView
+    private lateinit var tvCategoryTitle: TextView
 
     private lateinit var rvCategoryList: RecyclerView
     private lateinit var rvBannerList: RecyclerView
@@ -31,9 +31,11 @@ class MarketplaceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marketplace)
 
+        // Initialize views
         rvCategoryList = findViewById(R.id.rvCategoryList)
         rvBannerList = findViewById(R.id.rvBannerList)
         tvEmpty = findViewById(R.id.tvEmpty)
+        tvCategoryTitle = findViewById(R.id.tvCategoryTitle)
 
         rvCategoryList.layoutManager = LinearLayoutManager(this)
         rvBannerList.layoutManager = LinearLayoutManager(this)
@@ -53,32 +55,14 @@ class MarketplaceActivity : AppCompatActivity() {
                 val categories = categoriesResponse.body()?.data?.categories ?: emptyList()
                 allImagePosts = imagePostsResponse.body()?.data?.filter { it.type == "image" } ?: emptyList()
 
+                // Setup banner adapter with all image posts
                 bannerAdapter = BannerAdapter(allImagePosts) { item ->
                     openPropertyDetailsFragment(item)
                 }
                 rvBannerList.adapter = bannerAdapter
                 updateEmptyState(allImagePosts)
 
-                categoryAdapter = CategoryAdapter(
-                    categories,
-                    { selectedCategory ->
-                        val filteredPosts = allMarketPosts.filter { post ->
-                            post.category?._id == selectedCategory._id
-                        }
-                        if (filteredPosts.isNotEmpty()) {
-                            bannerAdapter.updatePosts(filteredPosts)
-                            updateEmptyState(filteredPosts)
-                        } else {
-                            bannerAdapter.updatePosts(allImagePosts)
-                            updateEmptyState(allImagePosts)
-                        }
-                    },
-                    { categoryId, subcategoryName ->
-                        fetchSubcategoryPosts(categoryId, subcategoryName)
-                    }
-                )
-
-                rvCategoryList.adapter = categoryAdapter
+                setupCategoryList(categories)
 
             } catch (e: HttpException) {
                 Toast.makeText(this@MarketplaceActivity, "Http Error: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -86,6 +70,32 @@ class MarketplaceActivity : AppCompatActivity() {
                 Toast.makeText(this@MarketplaceActivity, "Error: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun setupCategoryList(categories: List<Category>) {
+        categoryAdapter = CategoryAdapter(
+            categories,
+            { selectedCategory ->
+                // Update title when category is selected
+                tvCategoryTitle.text = selectedCategory.name
+
+                val filteredPosts = allMarketPosts.filter { post ->
+                    post.category?._id == selectedCategory._id
+                }
+
+                if (filteredPosts.isNotEmpty()) {
+                    bannerAdapter.updatePosts(filteredPosts)
+                    updateEmptyState(filteredPosts)
+                } else {
+                    bannerAdapter.updatePosts(allImagePosts)
+                    updateEmptyState(allImagePosts)
+                }
+            },
+            { categoryId, subcategoryName ->
+                fetchSubcategoryPosts(categoryId, subcategoryName)
+            }
+        )
+        rvCategoryList.adapter = categoryAdapter
     }
 
     private fun fetchSubcategoryPosts(categoryId: String, subcategoryName: String) {
@@ -139,5 +149,10 @@ class MarketplaceActivity : AppCompatActivity() {
                 Toast.makeText(this, "Image post clicked", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    // Reset category title to default
+    private fun resetCategoryTitle() {
+        tvCategoryTitle.text = "Categories"
     }
 }

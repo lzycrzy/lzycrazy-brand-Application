@@ -23,13 +23,13 @@
             android:contentDescription="app_icon"
             android:src="@drawable/lzycrazy_logo_home_screen" />
 
-        <!-- Flexible Spacer -->
+        <!-- Spacer -->
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- Bell Icon -->
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,11 +41,15 @@
                 android:id="@+id/bellIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="bell"
+                android:contentDescription="store"
                 android:src="@drawable/ic_bell_fragment_top_navigation" />
         </FrameLayout>
 
-        <!-- Message Icon -->
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,11 +61,15 @@
                 android:id="@+id/messageIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="message"
+                android:contentDescription="cart"
                 android:src="@drawable/ic_message_fragment_top_navigation" />
         </FrameLayout>
 
-        <!-- Profile Icon -->
+        <View
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,19 +77,22 @@
             android:background="@color/colorWhite"
             android:padding="4dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/profile_image"
-                app:civ_border_color="@color/black"
-                app:civ_border_width="2dp"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_profile_fragment_top_navigation" />
+                android:src="@drawable/ic_profile_fragment_top_navigation"
+                android:background="@drawable/circle_background"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/black" />
+
         </FrameLayout>
 
     </LinearLayout>
 
-    <!-- Full-width Divider -->
+    <!-- Full-width Divider (this will span the screen width) -->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
