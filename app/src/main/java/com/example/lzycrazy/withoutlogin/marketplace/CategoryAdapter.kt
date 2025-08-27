@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lzycrazy.R
-import com.example.lzycrazy.withoutlogin.marketplace.SubCategoryAdapter
-import com.google.android.material.imageview.ShapeableImageView
+import de.hdodenhof.circleimageview.CircleImageView
+
 class CategoryAdapter(
     private val list: List<Category>,
     private val onCategoryClicked: (Category) -> Unit,
@@ -19,7 +19,7 @@ class CategoryAdapter(
     private var expandedPosition = -1
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val icon: ShapeableImageView = view.findViewById(R.id.ivCategoryIcon)
+        val icon: CircleImageView = view.findViewById(R.id.ivCategoryIcon)
         val name: TextView = view.findViewById(R.id.tvCategoryTitle)
         val subCategoryList: RecyclerView = view.findViewById(R.id.rvSubCategoryList)
     }
@@ -37,6 +37,7 @@ class CategoryAdapter(
         holder.name.text = category.name
         Glide.with(holder.icon.context)
             .load(category.imageData.url)
+            .centerInside()
             .placeholder(R.drawable.ic_real_estate)
             .into(holder.icon)
 

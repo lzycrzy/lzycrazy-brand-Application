@@ -71,6 +71,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.10.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
+    implementation("com.google.android.gms:play-services-maps:19.2.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
