@@ -51,4 +51,8 @@
     <string name="marketplace_description">Welcome to our Properties section – your one-stop destination for finding the perfect place to live, invest, or grow your business. Whether you’re searching for a cozy 1BHK apartment, a spacious villa, a commercial office space, or a prime land plot, we offer a wide range of verified listings to suit every budget and lifestyle. Our platform is designed to make your property search smooth, secure, and hassle-free. From affordable housing options to luxury residences, we cover all categories, including fully furnished, semi-furnished, and unfurnished properties. You can filter your search based on location, price, size, amenities, and property type to find exactly what you’re looking for. We cater to both buyers and renters, offering up-to-date listings with high-quality images, accurate floor plans, and detailed information about each property. Whether you\'re a student, working professional, family, or investor — we ensure you get transparent deals with no hidden charges. Why wait? Explore properties in developing areas and hot locations that offer great future returns. Our property advisors and partners work closely to ensure that every listing is legal, verified, and ready for immediate possession or lease.</string>
     <string name="select_brand">Select Brand</string>
     <string name="add_photo_icon">Add Photo icon</string>
+    <string name="lzycrazy">LzyCrazy</string>
+    <string name="new_chat">New Chat</string>
+    <string name="you_can_create_new_group">You can create New Group</string>
+    <string name="search_or_start_new_chat">Search or start new chat</string>
 </resources>

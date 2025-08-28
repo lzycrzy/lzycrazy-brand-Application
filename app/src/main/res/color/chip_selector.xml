@@ -1,0 +1,12 @@
+<!-- res/drawable/chip_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Checked state -->
+    <item android:state_checked="true" android:drawable="@drawable/chip_checked_bg" android:color="#2196F3" />
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true" android:drawable="@drawable/chip_pressed_bg" android:color="#1976D2" />
+
+    <!-- Default state -->
+    <item android:drawable="@drawable/chip_default_bg" android:color="#D3D3D3" />
+</selector>
