@@ -2,21 +2,21 @@
     <item
         android:id="@+id/nav_home"
         android:title="Home"
-        android:icon="@drawable/ic_home" />
+        android:icon="@drawable/ic_home_bottom_nav_menu" />
     <item
-        android:id="@+id/nav_media"
-        android:title="Media"
-        android:icon="@drawable/ic_video" />
+        android:id="@+id/nav_ads"
+        android:title="Ads"
+        android:icon="@drawable/ic_ads_bottom_nav_menu" />
     <item
-        android:id="@+id/nav_shop"
-        android:title="Shop"
-        android:icon="@drawable/ic_shopicon" />
+        android:id="@+id/nav_post"
+        android:title="Post"
+        android:icon="@drawable/ic_post_bottom_nav_menu" />
     <item
-        android:id="@+id/nav_notification"
-        android:title="Alerts"
-        android:icon="@drawable/ic_notification" />
+        android:id="@+id/nav_market"
+        android:title="Market"
+        android:icon="@drawable/ic_market_bottom_nav_menu" />
     <item
-        android:id="@+id/nav_profile"
-        android:title="Profile"
-        android:icon="@drawable/ic_profile" />
+        android:id="@+id/nav_business"
+        android:title="Business"
+        android:icon="@drawable/ic_business_bottom_nav_menu" />
 </menu>

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorWhite">
+    android:background="@color/colorWhite"
+    tools:context=".MenuFragment">
 
+    <!-- Scrollable Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,85 +19,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
 
+            <!-- Title + Search -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:baselineAligned="false">
 
                 <TextView
-                    android:text="Menu"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#000000"
+                    android:id="@+id/menu"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp" />
 
                 <EditText
-                    android:layout_marginStart="8dp"
+                    android:id="@+id/search_bar_menu"
                     android:layout_width="0dp"
-                    android:layout_height="36dp"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_edittext"
                     android:drawableStart="@drawable/icons8_search_120"
-                    android:drawableTint="@color/LightGrey"
                     android:drawablePadding="8dp"
+                    android:drawableTint="@color/LightGrey"
                     android:hint="Search LzyCrazy..."
                     android:paddingHorizontal="12dp"
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Profile Card -->
-            <LinearLayout
-                android:layout_marginTop="20dp"
+            <!-- Divider -->
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:orientation="horizontal"
-                android:background="@drawable/rounded_white_button"
-                android:elevation="2dp"
-                android:padding="12dp">
-
-                <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="8dp">
-
-                    <ImageView
-                        android:id="@+id/profileImage"
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_profile_placeholder"
-                        android:scaleType="centerCrop"
-                        android:background="@drawable/rounded_image_bg"
-                        android:clipToOutline="true" />
-                </FrameLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:text="Jaahid hasan"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="#000000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Account Details"
-                        android:textSize="12sp"
-                        android:textColor="#888888"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
 
             <!-- Menu Items -->
             <LinearLayout
@@ -104,7 +70,7 @@
                 android:padding="16dp"
                 android:background="#FFFFFF">
 
-
+                <!-- Saved -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -117,7 +83,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ig_savedbutton"
-                        app:tint="@color/black"/>
+                        app:tint="@color/black" />
 
                     <TextView
                         android:layout_marginStart="12dp"
@@ -135,6 +101,12 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- Activity -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -165,6 +137,12 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- Notifications -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -195,6 +173,12 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- Notifications -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -206,7 +190,43 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_properties"
+                        android:src="@drawable/ic_changepassword"
+                        app:tint="#000000" />
+
+                    <TextView
+                        android:layout_marginStart="12dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Change Password"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#888888" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- My Ads -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_ads"
                         app:tint="#000000" />
 
                     <TextView
@@ -225,6 +245,12 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- Blocked -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -255,6 +281,12 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
+
+                <!-- Logout -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -285,6 +317,10 @@
                         app:tint="#888888" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/LightGrey" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -292,9 +328,9 @@
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
-        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_nav_menu" />
+        android:background="@color/colorWhite"
+        app:menu="@menu/bottom_nav_menu" />,
 
 </LinearLayout>

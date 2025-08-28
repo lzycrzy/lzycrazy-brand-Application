@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/editDetailsFragment"
-        android:name="com.example.lzycrazy.EditDetailsFragment"
+        android:name="com.example.lzycrazy.`EditDetailsFragment.kt`"
         android:label="Edit Details"/>
 
 

@@ -16,10 +16,16 @@
         android:layout_weight="1">
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
         app:menu="@menu/bottom_nav_menu" />
 
 </LinearLayout>

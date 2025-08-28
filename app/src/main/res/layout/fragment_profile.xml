@@ -1,535 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF">
+    android:background="#F5F5F5">
 
+    <!-- Main Scrollable Content -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Header Section -->
-        <RelativeLayout
+        <!-- Top Navigation Fragment -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/topNavigationFragmentContainer"
+            android:name="com.example.lzycrazy.TopNavigationFragment"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@drawable/lzycrazy_logo"
-            >
-
-            <!-- White bottom strip -->
-            <View
-                android:id="@+id/whiteBackground"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:background="@android:color/white" />
-
-            <!-- Profile image container -->
-            <FrameLayout
-                android:id="@+id/profileImageContainer"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="16dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="20dp">
-
-                <ImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_profile_placeholder"
-                    android:background="@drawable/ic_circle_background"
-                    android:contentDescription="Profile Image"
-                    android:clipToOutline="true" />
-
-
-                <ImageView
-                    android:id="@+id/cameraIcon"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="top|end"
-                    android:layout_margin="4dp"
-                    android:src="@drawable/ic_camera_add"
-                    android:background="@drawable/circle_background"
-                    android:padding="2dp" />
-            </FrameLayout>
-
-            <!-- Name and Friends Count -->
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/profileImageContainer"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="-8dp"
-            android:layout_toEndOf="@id/profileImageContainer"
-            android:orientation="vertical">
+            tools:layout="@layout/fragment_top_navigation" />
 
-
-            <TextView
-                android:id="@+id/tv_user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="User Name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"/>
-
+        <!-- ScrollView Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/friendCoun1t"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="128 "
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/friendCount2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" friends"
-                    android:textColor="@color/colorGrey"
-                    android:textSize="14sp" />
-            </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/LightGrey"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:background="#F2F3F5"
-            android:layout_marginTop="8dp"
-            android:baselineAligned="false"
-            android:weightSum="10">
-
-            <!-- Add to Story Button -->
-            <Button
-                android:id="@+id/btn_add_story"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="4"
-                android:text="Add to story"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/denim_blue"
-                app:backgroundTint="@null"
-                android:drawablePadding="8dp"
-                android:padding="0dp"
-                android:background="@drawable/topdown_rounded_bg" />
-
-            <!-- Spacer -->
-            <Space
-                android:layout_width="25dp"
-                android:layout_height="match_parent" />
-
-            <!-- Edit Profile Button -->
-            <Button
-                android:id="@+id/btn_edit_profile"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="4"
-                android:text="Edit profile"
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:backgroundTint="@color/denim_blue"
-                app:backgroundTint="@null"
-                android:drawablePadding="8dp"
-                android:padding="0dp"
-                android:background="@drawable/topdown_rounded_bg" />
-
-            <!-- Spacer -->
-            <Space
-                android:layout_width="25dp"
-                android:layout_height="match_parent" />
-
-            <!-- Three Dots Settings Icon -->
-            <ImageButton
-                android:id="@+id/btn_settings"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:backgroundTint="#E4E6EB"
-                android:src="@drawable/outline_settings_threeline"
-                android:background="@drawable/topdown_rounded_bg"
-                android:contentDescription="Settings"
-                android:scaleType="centerInside"
-                android:padding="8dp" />
-        </LinearLayout>
-
-
-        <!-- Tabs -->
-        <LinearLayout
-            android:id="@+id/profile_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="left"
-            android:layout_marginTop="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:text="Posts"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About"
-                android:textStyle="bold"
-                android:padding="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Photos"
-                android:textStyle="bold"
-                android:padding="12dp" />
-        </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardIntroSection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardUseCompatPadding="true">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:background="#F5F5F5">
 
-                <TextView
-                    android:id="@+id/introTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="  Intro"
-                    android:textColor="#333333"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
+                <!-- Top Profile Section -->
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_height="160dp"
+                    android:background="@color/denim_blue">
 
-                    <Button
-                        android:id="@+id/btnAddBio"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/topdown_rounded_bg"
-                        android:backgroundTint="#C3C3C3"
-                        app:backgroundTint="@null"
-                        android:text="Add Bio"
-                        android:textColor="#333333"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/btnEditDetails"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/topdown_rounded_bg"
-                        android:backgroundTint="#C3C3C3"
-                        app:backgroundTint="@null"
-                        android:text="Edit Details"
-                        android:textColor="#333333"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!-- Post Caption EditText -->
-        <EditText
-            android:id="@+id/edit_post_caption"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Write a caption..."
-            android:drawableEnd="@drawable/ic_photos"
-            android:background="@drawable/topdown_rounded_bg"
-            android:padding="12dp"
-            android:textSize="16sp"
-            android:layout_marginTop="12dp" />
-
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="12dp"
-            android:background="#F5F5F5">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <!-- Friends CardView -->
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:layout_height="150dp"
+                        android:background="@color/denim_blue">
 
-                        <!-- Title Row -->
+                        <!-- Profile + Username Row -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
                             android:orientation="horizontal"
                             android:gravity="center_vertical"
-                            android:weightSum="1">
+                            android:padding="16dp">
 
-                            <TextView
-                                android:layout_weight="0.7"
-                                android:text="Friends"
-                                android:textSize="18sp"
-                                android:textStyle="bold"
-                                android:textColor="#000000"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content" />
+                            <!-- Profile image container -->
+                            <FrameLayout
+                                android:id="@+id/profileImageContainer"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:background="@drawable/circle_outer_background"
+                                android:layout_marginEnd="16dp"
+                                android:clipToOutline="true">
 
+                                <!-- Inner profile circle -->
+                                <LinearLayout
+                                    android:layout_width="95dp"
+                                    android:layout_height="95dp"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/circle_inner_background"
+                                    android:gravity="center">
+
+                                    <!-- Profile image -->
+                                    <ImageView
+                                        android:id="@+id/profileImage"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/ic_camera_add"
+                                        android:scaleType="centerInside"
+                                        android:clipToOutline="true" />
+
+                                    <!-- Add Photo text -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Add Photo"
+                                        android:textColor="#000000"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginTop="4dp" />
+                                </LinearLayout>
+
+                                <!-- Camera icon -->
+                                <ImageView
+                                    android:id="@+id/cameraIcon"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="top|end"
+                                    android:layout_margin="6dp"
+                                    android:src="@drawable/ic_camera_add"
+                                    android:background="@drawable/circle_inner_background"
+                                    android:padding="4dp" />
+                            </FrameLayout>
+
+                            <!-- Username -->
                             <TextView
-                                android:layout_weight="0.3"
-                                android:text="See all friends"
-                                android:textSize="14sp"
-                                android:textColor="#1877F2"
-                                android:gravity="end"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content" />
+                                android:id="@+id/userName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User Name"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
 
-                        <TextView
-                            android:text="128 friends"
-                            android:textSize="13sp"
-                            android:textColor="#808080"
-                            android:layout_marginTop="4dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:background="@color/denim_blue"
+                    android:baselineAligned="false">
 
-                        <!-- Grid of Friends -->
-                        <GridLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:columnCount="3"
-                            android:rowCount="2"
-                            android:layout_marginTop="12dp"
-                            android:alignmentMode="alignMargins"
-                            android:columnOrderPreserved="false"
-                            android:padding="8dp">
+                    <!-- Add to Story -->
+                    <Button
+                        android:id="@+id/btn_add_story"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="5"
+                        android:text="Add to story"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/colorWhite"
+                        app:backgroundTint="@null"
+                        android:drawablePadding="15dp"
+                        android:paddingVertical="15dp"
+                        android:paddingHorizontal="70dp"
+                        android:padding="0dp"
+                        android:background="@drawable/topdown_rounded_bg" />
 
-                            <!-- Friend 1 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent" />
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend1"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
+                    <!-- Edit Profile -->
+                    <Button
+                        android:id="@+id/btn_edit_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="5"
+                        android:text="Edit profile"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/colorWhite"
+                        app:backgroundTint="@null"
+                        android:drawablePadding="8dp"
+                        android:paddingVertical="50dp"
+                        android:paddingHorizontal="10dp"
+                        android:padding="0dp"
+                        android:background="@drawable/topdown_rounded_bg" />
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Salman"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent" />
 
-                            <!-- Friend 2 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
+                    <!-- Settings -->
+                    <ImageButton
+                        android:id="@+id/btn_settings"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_settings_logo"
+                        android:background="@drawable/topdown_rounded_bg"
+                        android:contentDescription="Settings"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend2"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
+                <!-- Tabs -->
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ziya Faridi"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAbout"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About"
+                        android:textStyle="bold"
+                        app:checkedIcon="@null"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp" />
 
-                            <!-- Friend 3 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMyAds"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Ads"
+                        android:textStyle="bold"
+                        app:checkedIcon="@null"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp" />
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend3"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPosts"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Posts"
+                        android:textStyle="bold"
+                        app:checkedIcon="@null"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Shubam"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey" />
 
-                            <!-- Friend 4 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend4"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Salman"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-
-                            <!-- Friend 5 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend5"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Ziya Faridi"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-
-                            <!-- Friend 6 -->
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_gravity="fill"
-                                android:orientation="vertical"
-                                android:padding="4dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/friend6"
-                                    android:background="@drawable/topdown_rounded_bg"
-                                    android:clipToOutline="true" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Shubam"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    android:layout_marginTop="4dp" />
-                            </LinearLayout>
-                        </GridLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <!-- Post Caption EditText -->
+                <EditText
+                    android:id="@+id/edit_post_caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write a caption..."
+                    android:drawableEnd="@drawable/ic_photos"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-</ScrollView>
+
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black" />
+
+
+
+</RelativeLayout>

@@ -1,6 +1,5 @@
-package com.example.lzycrazy
+package com.example.lzycrazy.auth
 
-import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -8,8 +7,11 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.lzycrazy.R
 import com.hbb20.CountryCodePicker
 import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,8 +48,8 @@ class SignupActivity : AppCompatActivity() {
             )
 
             ApiClient.instance.registerUser(registerRequest)
-                .enqueue(object : retrofit2.Callback<Void> {
-                    override fun onResponse(call: Call<Void>, response: retrofit2.Response<Void>) {
+                .enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         if (response.isSuccessful) {
                             Toast.makeText(this@SignupActivity, "Registered Successfully", Toast.LENGTH_SHORT).show()
                         } else {
@@ -60,7 +62,6 @@ class SignupActivity : AppCompatActivity() {
                     }
                 })
         }
-
 
 
 
