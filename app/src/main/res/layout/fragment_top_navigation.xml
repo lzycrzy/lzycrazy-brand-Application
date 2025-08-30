@@ -60,8 +60,8 @@
             <ImageView
                 android:id="@+id/messageIcon"
                 android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="cart"
+                android:layout_height="wrap_content"
+                android:contentDescription="chat section"
                 android:src="@drawable/ic_message_fragment_top_navigation" />
         </FrameLayout>
 

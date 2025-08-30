@@ -13,6 +13,7 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.lzycrazy.chat.ChatsFragment
 
 class TopNavigationFragment : Fragment() {
 
@@ -32,7 +33,7 @@ class TopNavigationFragment : Fragment() {
             val popupUserName = popupView.findViewById<TextView>(R.id.tvName)
             val popupUserEmail = popupView.findViewById<TextView>(R.id.tvEmail)
             val popupUserId = popupView.findViewById<TextView>(R.id.tvId)
-            val signOutButton = popupView.findViewById<Button>(R.id.signUpButton)
+            val signOutButton = popupView.findViewById<Button>(R.id.btnSignOut)
 
             // Set user details (replace with real user data)
             popupUserName.text = "Name"
