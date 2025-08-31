@@ -51,6 +51,9 @@
         <activity
             android:name=".withoutlogin.marketplace.MarketplaceActivity"
             android:exported="false" />
+        <activity
+            android:name=".withlogin.marketplace.MarketplaceActivity"
+            android:exported="false" />
 
         <activity
             android:name=".withoutlogin.NewsActivity"
@@ -63,6 +66,12 @@
 
         <activity
             android:name=".withoutlogin.services.ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.chat.ChatDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.chat.ChatsActivity"
             android:exported="false" />
 
     </application>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_bg_white"
+    android:elevation="4dp">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp" />
+
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/circle_white_shadow"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_left"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circle_white_shadow"
+        android:padding="8dp"
+        android:src="@drawable/ic_arrow_right"
+        android:visibility="gone" />
+
+</FrameLayout>

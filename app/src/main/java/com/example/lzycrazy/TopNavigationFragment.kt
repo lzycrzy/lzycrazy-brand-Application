@@ -1,5 +1,6 @@
 package com.example.lzycrazy
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.FrameLayout
+import com.example.lzycrazy.withlogin.chat.ChatsActivity
 
 class TopNavigationFragment : Fragment() {
 
@@ -26,12 +28,17 @@ class TopNavigationFragment : Fragment() {
 
         val bellIcon = view.findViewById<ImageView>(R.id.bellIcon)
         bellIcon.setOnClickListener {
-            Toast.makeText(requireContext(), "You don't have any Notifications!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                requireContext(),
+                "You don't have any Notifications!",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         val messageIcon = view.findViewById<ImageView>(R.id.messageIcon)
         messageIcon.setOnClickListener {
-            Toast.makeText(requireContext(), "Message Coming Soon!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, ChatsActivity::class.java)
+            startActivity(intent)
         }
 
         val profileContainer = view.findViewById<FrameLayout>(R.id.profileContainer)

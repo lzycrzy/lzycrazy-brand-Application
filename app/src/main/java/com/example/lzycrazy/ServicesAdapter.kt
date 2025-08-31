@@ -26,7 +26,6 @@ class ServicesAdapter(private val items: List<ServicesAdapterItem>) :
 
     // In ServicesAdapter.kt
 
-    // In ServicesAdapter.kt
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".withoutlogin.marketplace.MarketplaceActivity">
+    android:orientation="vertical">
 
-    <!-- Horizontal content area -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -15,15 +14,13 @@
         android:orientation="horizontal"
         android:weightSum="100">
 
-        <!-- Category List (30%) with Title -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="25"
-            android:orientation="vertical"
-            android:background="#F9F9F9">
+            android:background="#F9F9F9"
+            android:orientation="vertical">
 
-            <!-- Centered Title -->
             <TextView
                 android:id="@+id/tvCategoryTitle"
                 android:layout_width="match_parent"
@@ -31,12 +28,11 @@
                 android:gravity="center"
                 android:paddingTop="12dp"
                 android:paddingBottom="8dp"
-                android:textStyle="bold"
                 android:text="Categories"
                 android:textColor="#333"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-            <!-- Category RecyclerView -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvCategoryList"
                 android:layout_width="match_parent"
@@ -47,20 +43,72 @@
                 tools:listitem="@layout/item_category" />
         </LinearLayout>
 
-        <!-- Banner List / Empty View (70%) -->
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="75"
             android:padding="8dp">
 
+            <!-- Banner Container (ViewPager + Static Banners) -->
+            <LinearLayout
+                android:id="@+id/bannerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/rounded_bg_white"
+                    android:elevation="4dp">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/viewPagerBannerNew"
+                        android:name="com.example.lzycrazy.withoutlogin.marketplace.MarketplacePropertyImagesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="16dp"
+                        tools:layout="@layout/fragment_marketplace_banner_images" />
+                </FrameLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/banner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/banner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/banner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+            </LinearLayout>
+
+            <!-- RecyclerView for Subcategory Items -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvBannerList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
+                android:visibility="gone"
                 tools:listitem="@layout/item_property_banner" />
 
+            <!-- Empty view if no banners -->
             <TextView
                 android:id="@+id/tvEmpty"
                 android:layout_width="match_parent"
