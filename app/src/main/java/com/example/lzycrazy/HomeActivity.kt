@@ -13,9 +13,12 @@ import com.example.lzycrazy.auth.ForgotPasswordActivity
 import com.example.lzycrazy.auth.LoginRequest
 import com.example.lzycrazy.auth.LoginResponse
 import com.example.lzycrazy.auth.SignupActivity
-import com.example.lzycrazy.withoutlogin.AboutUsActivity
-import com.example.lzycrazy.withoutlogin.NewsActivity
+import com.example.lzycrazy.withoutlogin.aboutus.AboutUsActivity
+import com.example.lzycrazy.withoutlogin.news.NewsActivity
 import com.example.lzycrazy.withoutlogin.careers.ApplicationDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.EmailDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.SuccessDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.TasksDialogFragment
 import com.example.lzycrazy.withoutlogin.marketplace.MarketplaceActivity
 import com.example.lzycrazy.withoutlogin.services.ServicesActivity
 import retrofit2.Call

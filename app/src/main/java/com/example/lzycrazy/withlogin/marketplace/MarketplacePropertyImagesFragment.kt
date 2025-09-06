@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import com.example.lzycrazy.ImageSliderAdapter
+import com.example.lzycrazy.not_in_currently_used.ImageSliderAdapter
 import com.example.lzycrazy.R
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 

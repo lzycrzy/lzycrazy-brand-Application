@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -56,6 +57,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.3")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 
     implementation("androidx.activity:activity:1.10.1")
     //noinspection Aligned16KB

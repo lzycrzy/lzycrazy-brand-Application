@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.lzycrazy.withlogin.marketplace.MarketplaceActivity
+import com.example.lzycrazy.withlogin.marketpost.kuldeep.electro_store.PCAccessoriesFragment
+import com.example.lzycrazy.withlogin.reels.ReelsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeScreenActivity : AppCompatActivity() {
@@ -24,7 +26,7 @@ class HomeScreenActivity : AppCompatActivity() {
                     startActivity(intent)
                     false
                 }
-                R.id.nav_business -> replaceWithFragment(ProfileFragment())
+                R.id.nav_business -> replaceWithFragment(PCAccessoriesFragment())
                 else -> false
             }
             true

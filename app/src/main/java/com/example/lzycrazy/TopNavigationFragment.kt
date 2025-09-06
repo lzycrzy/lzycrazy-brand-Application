@@ -2,18 +2,19 @@ package com.example.lzycrazy
 
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.graphics.drawable.toDrawable
 import androidx.fragment.app.Fragment
-import android.widget.ImageView
-import android.widget.FrameLayout
 import com.example.lzycrazy.withlogin.chat.ChatsActivity
+import com.example.lzycrazy.withlogin.notifications.NotificationActivity
 
 class TopNavigationFragment : Fragment() {
 
@@ -28,11 +29,8 @@ class TopNavigationFragment : Fragment() {
 
         val bellIcon = view.findViewById<ImageView>(R.id.bellIcon)
         bellIcon.setOnClickListener {
-            Toast.makeText(
-                requireContext(),
-                "You don't have any Notifications!",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(context, NotificationActivity::class.java)
+            startActivity(intent)
         }
 
         val messageIcon = view.findViewById<ImageView>(R.id.messageIcon)
@@ -57,7 +55,7 @@ class TopNavigationFragment : Fragment() {
             true
         )
 
-        popupWindow.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popupWindow.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
         popupWindow.isOutsideTouchable = true
         popupWindow.elevation = 10f
 

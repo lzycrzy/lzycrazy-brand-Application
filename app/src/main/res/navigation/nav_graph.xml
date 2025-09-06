@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/editDetailsFragment"
-        android:name="com.example.lzycrazy.EditDetailsFragment"
+        android:name="com.example.lzycrazy.not_in_currently_used.EditDetailsFragment"
         android:label="Edit Details"/>
 
 
