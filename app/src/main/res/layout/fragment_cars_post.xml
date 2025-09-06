@@ -33,7 +33,7 @@
                 android:id="@+id/closeButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_close"
+                android:src="@drawable/ic_cross"
                 android:layout_alignParentEnd="true"
                 android:contentDescription="Close" />
         </RelativeLayout>

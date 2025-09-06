@@ -9,6 +9,7 @@ import com.example.lzycrazy.withlogin.marketpost.kuldeep.electro_store.PCAccesso
 import com.example.lzycrazy.withlogin.reels.ReelsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+
 class HomeScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,3 +42,4 @@ class HomeScreenActivity : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 }
+
