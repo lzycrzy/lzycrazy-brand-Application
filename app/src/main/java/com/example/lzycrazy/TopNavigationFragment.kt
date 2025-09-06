@@ -13,6 +13,7 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.lzycrazy.chat.ChatDetailActivity
 import com.example.lzycrazy.chat.ChatsFragment
 
 class TopNavigationFragment : Fragment() {
@@ -58,6 +59,13 @@ class TopNavigationFragment : Fragment() {
                 popupWindow.dismiss()
                 Toast.makeText(requireContext(), "Sign out", Toast.LENGTH_SHORT).show()
             }
+             val messageIcon = view.findViewById<ImageView>(R.id.messageIcon)
+            messageIcon.setOnClickListener {
+                val chatFragment = ChatsFragment()
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, chatFragment) // replace with your container ID
+                    .addToBackStack(null)
+                    .commit() }
         }
 
         return view

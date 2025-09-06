@@ -32,8 +32,11 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
-
         <activity
+            android:name=".withlogin.divesh_post.PostAdActivity"
+            android:exported="true" />
+
+    <activity
             android:name=".auth.SignupActivity"
             android:exported="false" />
 
