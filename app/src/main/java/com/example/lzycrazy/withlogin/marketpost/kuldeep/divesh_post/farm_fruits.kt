@@ -1,4 +1,4 @@
-package com.example.lzycrazy.withlogin.divesh_post
+package com.example.lzycrazy.withlogin.marketpost.kuldeep.divesh_post
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,13 +12,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.lzycrazy.R
 
-class VehicleBicyclesFragment : Fragment() {
+class FarmFruitsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val view =  inflater.inflate(R.layout.fragment_vehicle_bicycles, container, false)
+        val view = inflater.inflate(R.layout.fragment_farm_fruits, container, false)
 
         // Initialize spinners and other views from layout
         val spinnerCountry: Spinner = view.findViewById(R.id.spinnerCountry)
@@ -122,16 +122,4 @@ class VehicleBicyclesFragment : Fragment() {
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // Setup spinners with dummy data
-        setupSpinner(view.findViewById(R.id.spinnerBrand), listOf("--- Choose Brand ---", "Hercules", "Hero", "Adrenix","Atlas","BSA","BTwin","G Sports","Giant","HRX","Keysto"))
-    }
-
-    private fun setupSpinner(spinner: Spinner, items: List<String>) {
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, items)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = adapter
-    }
 }

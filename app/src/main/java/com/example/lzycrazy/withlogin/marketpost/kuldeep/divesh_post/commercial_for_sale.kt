@@ -1,4 +1,4 @@
-package com.example.lzycrazy.withlogin.divesh_post
+package com.example.lzycrazy.withlogin.marketpost.kuldeep.divesh_post
 
 import android.os.Bundle
 import android.view.LayoutInflater

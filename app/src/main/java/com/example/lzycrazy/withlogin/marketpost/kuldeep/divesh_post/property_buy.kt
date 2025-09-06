@@ -1,4 +1,4 @@
-package com.example.lzycrazy.withlogin.divesh_post
+package com.example.lzycrazy.withlogin.marketpost.kuldeep.divesh_post
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,13 +12,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.lzycrazy.R
 
-class VehicleCarsFragment : Fragment() {
+class PropertyBuyFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_vehicle_cars, container, false)
+        val view = inflater.inflate(R.layout.fragment_property_buy, container, false)
 
         // Initialize spinners and other views from layout
         val spinnerCountry: Spinner = view.findViewById(R.id.spinnerCountry)
@@ -126,8 +126,14 @@ class VehicleCarsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Setup spinners with dummy data
-        setupSpinner(view.findViewById(R.id.spinnerBrand), listOf("--- Choose Brand ---", "Audi", "Ambessador", "Ashok Leyland","Aston Martin","Bentley","Citroen","Tesla","Lotus","BMW","Bugatti"))
-        setupSpinner(view.findViewById(R.id.spinnerFuel), listOf("--- Choose Fuel ---", "CNG & Hybrids", "Diesel", "Electric", "LPG","Petro"))
+        setupSpinner(view.findViewById(R.id.spinnerType), listOf("Choose Type", "Flat / Apartment", "Residential House", "Independent House/Villa","Residential Land/Plot","Luxury Property"))
+        setupSpinner(view.findViewById(R.id.spinnerBhk), listOf("Choose BHK", "1 BHK", "2 BHK", "3 BHK", "4 BHK","5 BHK","5+ BHK"))
+        setupSpinner(view.findViewById(R.id.spinnerBathrooms), listOf("Choose Bathrooms", "1", "2", "3", "4","5","5+"))
+        setupSpinner(view.findViewById(R.id.spinnerFurnishing), listOf("Choose Furnishing", "Furnished", "Semi-Furnished", "Unfurnished"))
+        setupSpinner(view.findViewById(R.id.spinnerProjectStatus), listOf("Choose Project Status", "New Launch", "Ready to Move", "Under Construction"))
+        setupSpinner(view.findViewById(R.id.spinnerListedBy), listOf("Choose Listed by", "Builder", "Dealer", "Owner"))
+        setupSpinner(view.findViewById(R.id.spinnerCarParking),listOf("Choose Car Parking", "1","2","3","3+"))
+        setupSpinner(view.findViewById(R.id.spinnerFacing),listOf("Choose Facing", "East","North-East","North-West","South","South-East","South-West","West"))
     }
 
     private fun setupSpinner(spinner: Spinner, items: List<String>) {

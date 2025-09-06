@@ -1,4 +1,4 @@
-package com.example.lzycrazy.withlogin.divesh_post
+package com.example.lzycrazy.withlogin.marketpost.kuldeep.divesh_post
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,13 +12,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.lzycrazy.R
 
-class VehicleBikesFragment : Fragment() {
+class PropertyCommercialForLeaseFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view =  inflater.inflate(R.layout.fragment_vehicle_bikes, container, false)
+        val view = inflater.inflate(R.layout.fragment_commercial_for_lease, container, false)
 
         // Initialize spinners and other views from layout
         val spinnerCountry: Spinner = view.findViewById(R.id.spinnerCountry)
@@ -126,7 +126,10 @@ class VehicleBikesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Setup spinners with dummy data
-        setupSpinner(view.findViewById(R.id.spinnerBrand), listOf("--- Choose Brand ---", "Harley-Davidson", "Yezdi", "BMW","Kawasaki","Revolt","Ducati","Jawa","Benelli","Aprilia","Avanturaa Choppers"))
+        setupSpinner(view.findViewById(R.id.spinnerType), listOf("Choose Type", "Flat / Apartment", "Residential House", "Independent House/Villa","Residential Land/Plot","Luxury Property"))
+        setupSpinner(view.findViewById(R.id.spinnerFurnishing), listOf("Choose Furnishing", "Furnished", "Semi-Furnished", "Unfurnished"))
+        setupSpinner(view.findViewById(R.id.spinnerListedBy), listOf("Choose Listed by", "Builder", "Dealer", "Owner"))
+        setupSpinner(view.findViewById(R.id.spinnerBathrooms), listOf("Choose Bathrooms", "1", "2", "3", "4","5","5+"))
     }
 
     private fun setupSpinner(spinner: Spinner, items: List<String>) {

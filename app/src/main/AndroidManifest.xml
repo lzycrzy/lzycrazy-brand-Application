@@ -33,7 +33,7 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".withlogin.divesh_post.PostAdActivity"
+            android:name=".withlogin.marketpost.kuldeep.divesh_post.PostAdActivity"
             android:exported="true" />
 
     <activity
