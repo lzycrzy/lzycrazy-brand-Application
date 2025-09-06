@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+android:width="24dp"
+android:height="24dp"
+android:viewportWidth="512"
+android:viewportHeight="512">
+
+<!-- Hand -->
+<path
+    android:fillColor="#F4C38A"
+    android:pathData="M100,360 C150,400 260,420 340,420 C390,420 440,380 460,340 L420,310 C400,340 360,360 320,360 C240,360 180,340 140,300 Z" />
+
+<!-- House base -->
+<path
+    android:fillColor="#E6F0FA"
+    android:pathData="M180,240 L180,360 L340,360 L340,240 Z" />
+
+<!-- House roof -->
+<path
+    android:fillColor="#EF4444"
+    android:pathData="M160,240 L260,160 L360,240 Z" />
+
+<!-- Chimney -->
+<path
+    android:fillColor="#F59E0B"
+    android:pathData="M300,160 L300,200 L320,200 L320,160 Z" />
+
+<!-- Door -->
+<path
+    android:fillColor="#1E3A8A"
+    android:pathData="M240,280 L240,360 L280,360 L280,280 Z" />
+
+</vector>
+

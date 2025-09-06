@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
+
+    <!-- Subcategory Icon (Circular) -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivSubCategoryImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Subcategory Icon"
+        android:src="@drawable/ic_real_estate" />
+
+    <!-- Subcategory Name -->
+    <TextView
+        android:id="@+id/tvSubCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingTop="8dp"
+        android:text="Subcategory Name"
+        android:textColor="#111"
+        android:textSize="12sp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#DDDDDD" />
+</LinearLayout>

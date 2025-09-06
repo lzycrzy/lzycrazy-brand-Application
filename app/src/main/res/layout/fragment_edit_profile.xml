@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="32dp"
+    android:background="@android:color/white"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/editProfileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Profile Image with Upload Icon -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp">
+
+                <!-- Profile container -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/circle_background"
+                    android:gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="20dp">
+
+                    <!-- Profile image -->
+                    <ImageView
+                        android:id="@+id/ivProfileImage"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:clipToOutline="true" />
+
+                    <!-- Add Photo text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Photo"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Camera icon overlay -->
+                <ImageView
+                    android:id="@+id/cameraIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:src="@drawable/ic_camera_add"
+                    android:background="@drawable/circle_background"
+                    android:padding="2dp" />
+            </FrameLayout>
+
+            <!-- First Name -->
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext2"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Last Name -->
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext2"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:scrollHorizontally="true"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:backgroundTint="@color/LightGrey"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:backgroundTint="#2196F3"
+                    app:backgroundTint="@null"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

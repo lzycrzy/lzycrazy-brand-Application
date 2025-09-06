@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Close Icon -->
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Close"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_below="@id/closeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Container Box -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD PRODUCT DETAILS"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Path + Change -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test/Check"
+                        android:textSize="13sp"
+                        android:textColor="#000000"
+                        android:layout_marginEnd="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="change"
+                        android:textSize="13sp"
+                        android:textColor="#1E88E5"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DDDDDD"
+                    android:layout_marginVertical="12dp" />
+
+                <!-- INCLUDE SOME DETAILS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INCLUDE SOME DETAILS"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Brand Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand *"
+                    android:textSize="13sp" />
+                <Spinner
+                    android:id="@+id/brandSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/rounded_edittext" />
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title *"
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Write a specific title"
+                    android:maxLength="70"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="10dp"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Write a specific title                                                                                  (0/70)"
+                    android:textSize="11sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description *"
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp" />
+
+                <EditText
+                    android:id="@+id/descEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Description"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Tell about the product                                                                         (0/1000)"
+                    android:textSize="11sp"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp"
+                    />
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Favorite"
+                    android:textSize="13sp" />
+                <Spinner
+                    android:id="@+id/SelectFavoriteSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/rounded_edittext" />
+
+
+                <!-- SET A PRICE -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="SET A PRICE"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Price Field -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price *"
+                    android:textSize="13sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/add_photo_border"
+                    android:paddingHorizontal="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹"
+                        android:textSize="16sp"
+                        android:textColor="#000" />
+
+                    <EditText
+                        android:id="@+id/priceEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter price"
+                        android:paddingStart="8dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- UPLOAD PHOTO SECTION -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UPLOAD PHOTO UPTO 8 PHOTOS"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- 8 Image Upload Boxes -->
+                <GridLayout
+                    android:id="@+id/photoGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:rowCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:useDefaultMargins="true">
+
+                    <!-- First one is the Add Photo box -->
+                    <LinearLayout
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/add_photo_border"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_camera_add"
+                            android:contentDescription="Add Photo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Photo"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_margin="4dp"
+                        android:padding="25dp"
+                        android:src="@drawable/ic_camera_add"
+                        android:background="@drawable/add_photo_border"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Photo" />
+
+
+
+                </GridLayout>
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONFIRM YOUR LOCATION"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- State -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State *"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="#000" />
+
+                <Spinner
+                    android:id="@+id/stateSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/add_photo_border"
+                    android:paddingHorizontal="12dp" />
+
+                <!-- City -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City *"
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="#000" />
+
+                <Spinner
+                    android:id="@+id/citySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/add_photo_border"
+                    android:paddingHorizontal="12dp" />
+
+                <!-- Neighbourhood -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neighbourhood"
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/neighbourhoodEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter neighbourhood"
+                    android:background="@drawable/add_photo_border"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="13sp"
+                    android:inputType="text" />
+
+                <!-- Submit Button -->
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/input_bg_round"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Categories" />
+    <item
+        android:id="@+id/nav_vehicles"
+        android:title="Vehicles" />
+    <item
+        android:id="@+id/nav_real_estate"
+        android:title="Real Estate" />
+    <item
+        android:id="@+id/nav_electronics"
+        android:title="Electronics" />
+    <item
+        android:id="@+id/nav_fashion"
+        android:title="Fashion" />
+    <item
+        android:id="@+id/nav_jobs"
+        android:title="Jobs" />
+    <item
+        android:id="@+id/nav_services"
+        android:title="Services" />
+    <item
+        android:id="@+id/nav_pets"
+        android:title="Pets" />
+    <item
+        android:id="@+id/nav_furniture"
+        android:title="Furniture" />
+    <item
+        android:id="@+id/nav_books"
+        android:title="Books" />
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aboutFragment">
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.lzycrazy.AboutFragment"
+        android:label="About">
+
+        <action
+            android:id="@+id/action_aboutFragment_to_editDetailsFragment"
+            app:destination="@id/editDetailsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/editDetailsFragment"
+        android:name="com.example.lzycrazy.EditDetailsFragment"
+        android:label="Edit Details"/>
+
+
+</navigation>
+
+
+
+

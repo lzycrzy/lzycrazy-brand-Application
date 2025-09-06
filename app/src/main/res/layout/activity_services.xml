@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="12dp"
+        android:text="Our Services"
+        android:textColor="#FF6F00"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for dynamic content -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"
+        tools:listitem="@layout/item_business_card" />
+
+</LinearLayout>

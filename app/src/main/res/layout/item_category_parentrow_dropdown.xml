@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/bg_category"
+    android:gravity="center_vertical"
+    android:layout_margin="10dp">
+
+    <!-- (Hidden for now—icons will come from API) -->
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="gone"
+        android:contentDescription="Category Icon" />
+
+    <TextView
+        android:id="@+id/categoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Category Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/expandIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@android:drawable/arrow_down_float"
+        android:contentDescription="Expand/Collapse"
+        app:tint="@color/black" />
+
+</LinearLayout>

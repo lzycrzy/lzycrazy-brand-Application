@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center">
+
+    <!-- Success Icon -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_success"
+        android:contentDescription="Success"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Success Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Success!"
+        android:textSize="24sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Success Message -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your tasks have been submitted successfully!"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Email Information -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email ID: hr@lzycrazy.com"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Got it Button -->
+    <Button
+        android:id="@+id/btnGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Got it!"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/button_background"/>
+</LinearLayout>
