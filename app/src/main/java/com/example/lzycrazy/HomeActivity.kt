@@ -14,9 +14,18 @@ import com.example.lzycrazy.auth.ForgotPasswordActivity
 import com.example.lzycrazy.auth.LoginRequest
 import com.example.lzycrazy.auth.LoginResponse
 import com.example.lzycrazy.auth.SignupActivity
+<<<<<<< HEAD
 import com.example.lzycrazy.withoutlogin.AboutUsActivity
 import com.example.lzycrazy.withoutlogin.NewsActivity
 import com.example.lzycrazy.withoutlogin.careers.ApplicationDialogFragment
+=======
+import com.example.lzycrazy.withoutlogin.aboutus.AboutUsActivity
+import com.example.lzycrazy.withoutlogin.news.NewsActivity
+import com.example.lzycrazy.withoutlogin.careers.ApplicationDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.EmailDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.SuccessDialogFragment
+import com.example.lzycrazy.withoutlogin.careers.TasksDialogFragment
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 import com.example.lzycrazy.withoutlogin.marketplace.MarketplaceActivity
 import com.example.lzycrazy.withoutlogin.services.ServicesActivity
 import retrofit2.Call
@@ -32,6 +41,7 @@ class HomeActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        // Keep IDs from the first version
         val emailEditText = findViewById<EditText>(R.id.editTextEmailAddress)
         val passwordEditText = findViewById<EditText>(R.id.editTextPassword)
         val loginButton = findViewById<Button>(R.id.loginButton)
@@ -41,6 +51,11 @@ class HomeActivity : AppCompatActivity(),
         val careersButton = findViewById<Button>(R.id.careers_button)
         val servicesButton = findViewById<Button>(R.id.services_button)
         val newsButton = findViewById<Button>(R.id.news_button)
+<<<<<<< HEAD
+=======
+
+        // Additional button from second version
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
         val marketplaceButton = findViewById<Button>(R.id.marketplace_button)
 
         loginButton.setOnClickListener {
@@ -61,6 +76,7 @@ class HomeActivity : AppCompatActivity(),
                 ) {
                     if (response.isSuccessful) {
                         Toast.makeText(this@HomeActivity, "Login Successful", Toast.LENGTH_SHORT).show()
+<<<<<<< HEAD
 
                         // ✅ Save user data to SharedPreferences
                         val sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE)
@@ -71,6 +87,8 @@ class HomeActivity : AppCompatActivity(),
                         editor.apply()
 
                         // Go to next screen
+=======
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                         startActivity(Intent(this@HomeActivity, HomeScreenActivity::class.java))
                         finish()
                     } else {

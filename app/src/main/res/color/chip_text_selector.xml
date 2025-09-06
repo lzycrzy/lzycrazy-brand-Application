@@ -1,0 +1,11 @@
+<!-- res/color/chip_text_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state -->
+    <item android:state_checked="true" android:color="#FFFFFF" />
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true" android:color="#FFFFFF" />
+
+    <!-- Default (unchecked) -->
+    <item android:color="@color/black" />
+</selector>

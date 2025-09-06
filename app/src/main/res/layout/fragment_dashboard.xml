@@ -101,10 +101,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+<<<<<<< HEAD
                         android:text="ACTIVE LISTINGS"
                         android:textStyle="bold"
                         android:textSize="14sp"
                         android:textColor="#444444"/>
+=======
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 
                     <TextView
                         android:id="@+id/tvActiveListingsCount"

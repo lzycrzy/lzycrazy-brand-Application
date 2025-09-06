@@ -38,7 +38,7 @@
                     android:id="@+id/user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mo Zeeshu"
+                    android:text="Mr. Jaahid Hasan"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:contentDescription="Options"
-                android:src="@drawable/menu_bar_icon" />
+                android:src="@drawable/ic_more_vertical" />
         </RelativeLayout>
 
         <!-- Content Description -->

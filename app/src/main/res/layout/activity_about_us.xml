@@ -4,7 +4,7 @@
     android:id="@+id/aboutUs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
+    android:background="#F5F5F5"
     android:fillViewport="true">
 
     <LinearLayout
@@ -13,38 +13,38 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- About the Company Card -->
+        <!-- About the Company -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@android:color/white"
-            android:elevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Image of people"
                     android:scaleType="fitCenter"
+                    android:contentDescription="About Company"
                     android:src="@drawable/about_us_img_1" />
 
                 <TextView
                     android:id="@+id/tv_company_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
                     android:text="About the Company"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -53,54 +53,55 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="What drives us"
-                    android:textColor="#555555"
-                    android:textSize="18sp"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tv_company_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/about_company_description"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Our Team Card -->
+        <!-- Our Team -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@android:color/white"
-            android:elevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Our team"
                     android:scaleType="fitCenter"
+                    android:contentDescription="Our Team"
                     android:src="@drawable/about_us_img_2" />
 
                 <TextView
                     android:id="@+id/tv_team_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
                     android:text="Our Team"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -109,54 +110,55 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Who we are"
-                    android:textColor="#555555"
-                    android:textSize="18sp"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tv_team_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/lzycrazy_team_description"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Our Vision Card -->
+        <!-- Our Vision -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@android:color/white"
-            android:elevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:adjustViewBounds="true"
-                    android:contentDescription="Our vision"
                     android:scaleType="fitCenter"
+                    android:contentDescription="Our Vision"
                     android:src="@drawable/about_us_img_3" />
 
                 <TextView
                     android:id="@+id/tv_vision_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
                     android:text="Our Vision"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -165,36 +167,37 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Looking ahead"
-                    android:textColor="#555555"
-                    android:textSize="18sp"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tv_vision_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/lzycracy_vision"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Our Values Card (No Image) -->
+        <!-- Our Values (No Image) -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:background="@android:color/white"
-            android:elevation="4dp"
-            app:cardCornerRadius="12dp">
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/tv_values_heading"
@@ -202,8 +205,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Our Values"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
+                    android:textColor="#212121"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -212,19 +215,20 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="What we believe"
-                    android:textColor="#555555"
-                    android:textSize="18sp"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tv_values_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:lineSpacingExtra="4dp"
                     android:text="@string/lzycrazy_values"
-                    android:textColor="#333333"
-                    android:textSize="16sp" />
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    android:justificationMode="inter_word" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

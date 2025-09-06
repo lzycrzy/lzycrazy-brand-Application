@@ -48,9 +48,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/circle_background"
+<<<<<<< HEAD
                 android:gravity="center"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="20dp">
+=======
+                android:contentDescription="profile_image"
+                android:clipToOutline="true" />
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 
                 <!-- Profile image -->
                 <ImageView

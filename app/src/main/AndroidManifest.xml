@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.lzycrazy">
+<<<<<<< HEAD
     <!-- Internet permission -->
+=======
+
+    <!-- Permissions -->
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,6 +23,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
+<<<<<<< HEAD
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="false" />
@@ -35,6 +42,9 @@
             android:exported="false"/>
 
 
+=======
+        <!-- Splash screen: App splash Screen -->
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -44,6 +54,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
@@ -54,3 +65,60 @@
     </application>
 
 </manifest>
+=======
+        <activity android:name=".chat.ChatDetailActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".withlogin.marketpost.kuldeep.divesh_post.PostAdActivity"
+            android:exported="true" />
+
+    <activity
+            android:name=".auth.SignupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.marketplace.MarketplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.marketplace.MarketplaceActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.news.NewsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".withoutlogin.aboutus.AboutUsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LzyCrazy" />
+
+        <activity
+            android:name=".withoutlogin.services.ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.chat.ChatDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.notifications.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.chat.ChatsActivity"
+            android:exported="false" />
+
+    </application>
+</manifest>
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b

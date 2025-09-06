@@ -14,11 +14,30 @@
             app:destination="@id/editDetailsFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lzycrazy.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/editDetailsFragment"
+<<<<<<< HEAD
         android:name="com.example.lzycrazy.`EditDetailsFragment.kt`"
+=======
+        android:name="com.example.lzycrazy.not_in_currently_used.EditDetailsFragment"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
         android:label="Edit Details"/>
+
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.example.lzycrazy.chat.ChatsFragment"
+        android:label="Chats" />
+
 
 
 </navigation>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Whole Screen Content -->
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- LzyCrazy Title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lzycrazy"
+                android:textColor="#121B22"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Icons -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/new_chat"
+                android:src="@drawable/ic_add"
+                android:padding="8dp"
+                app:tint="#121B22" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/you_can_create_new_group"
+                android:src="@drawable/ic_more_vert"
+                android:padding="8dp"
+                app:tint="#121B22" />
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:hint="@string/search_or_start_new_chat"
+            android:background="@drawable/rounded_white_search"
+            app:background="@null"
+            android:paddingStart="10dp"
+            android:textColor="#121B22"
+            android:textColorHint="#8899A6" />
+
+        <!-- Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filter_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            app:chipSpacing="8dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="All"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_selector" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_unread"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unread"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_selector" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_favourites"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favourites"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_selector" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_groups"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groups"
+                android:textColor="@color/chip_text_selector"
+                app:chipBackgroundColor="@color/chip_selector" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Archived Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_archive"
+                app:tint="#A0A0A0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="12dp"
+                android:text="Archived"
+                android:textColor="#121B22"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#2196F3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Chat List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

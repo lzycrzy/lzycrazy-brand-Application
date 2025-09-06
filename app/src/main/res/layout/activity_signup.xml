@@ -69,7 +69,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
+<<<<<<< HEAD
                     android:background="@drawable/button_background"
+=======
+                    android:background="@drawable/home_button_background"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:paddingHorizontal="15dp"
@@ -84,7 +88,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
+<<<<<<< HEAD
                     android:background="@drawable/button_background"
+=======
+                    android:background="@drawable/home_button_background"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:paddingHorizontal="15dp"
@@ -99,7 +107,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
+<<<<<<< HEAD
                     android:background="@drawable/button_background"
+=======
+                    android:background="@drawable/home_button_background"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:paddingHorizontal="10dp"
@@ -124,7 +136,11 @@
                     android:id="@+id/news_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:background="@drawable/button_background"
+=======
+                    android:background="@drawable/home_button_background"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:paddingHorizontal="20dp"
@@ -146,15 +162,24 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="6dp"
+<<<<<<< HEAD
                         app:backgroundTint="@null"
                         android:background="@drawable/button_background"
+=======
+                        android:background="@drawable/home_button_background"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                         android:minWidth="0dp"
                         android:minHeight="0dp"
                         android:paddingHorizontal="15dp"
                         android:paddingVertical="6dp"
                         android:text="Careers  "
                         android:textColor="#000000"
+<<<<<<< HEAD
                         android:textSize="12sp" />
+=======
+                        android:textSize="12sp"
+                        app:backgroundTint="@null" />
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 
                     <!-- Red Dot -->
                     <View

@@ -17,7 +17,11 @@
         android:orientation="vertical">
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/popupUserName"
+=======
+            android:id="@+id/tvName"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name"
@@ -26,7 +30,11 @@
             android:textSize="14sp" />
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/popupUserId"
+=======
+            android:id="@+id/tvId"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID: Lc1"
@@ -35,7 +43,11 @@
             android:layout_marginTop="2dp" />
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/popupUserEmail"
+=======
+            android:id="@+id/tvEmail"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="lzycrazy@gmail.com"
@@ -50,7 +62,11 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
+<<<<<<< HEAD
             android:id="@+id/signOutButton"
+=======
+            android:id="@+id/btnSignOut"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign out"
@@ -60,4 +76,8 @@
             android:drawableStart="@drawable/ic_logout_red"
             android:drawablePadding="8dp" />
     </LinearLayout>
+<<<<<<< HEAD
 </androidx.cardview.widget.CardView>
+=======
+</androidx.cardview.widget.CardView>
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
