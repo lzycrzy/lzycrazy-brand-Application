@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.lzycrazy.BusinessProfileDialogFragment
 import com.example.lzycrazy.R
 
 class ServicesAdapter(private val items: List<ServicesAdapterItem>) :

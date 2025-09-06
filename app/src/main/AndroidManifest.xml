@@ -56,11 +56,11 @@
             android:exported="false" />
 
         <activity
-            android:name=".withoutlogin.NewsActivity"
+            android:name=".withoutlogin.news.NewsActivity"
             android:exported="false" />
 
         <activity
-            android:name=".withoutlogin.AboutUsActivity"
+            android:name=".withoutlogin.aboutus.AboutUsActivity"
             android:exported="false"
             android:theme="@style/Theme.LzyCrazy" />
 
@@ -69,6 +69,9 @@
             android:exported="false" />
         <activity
             android:name=".withlogin.chat.ChatDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".withlogin.notifications.NotificationActivity"
             android:exported="false" />
         <activity
             android:name=".withlogin.chat.ChatsActivity"
