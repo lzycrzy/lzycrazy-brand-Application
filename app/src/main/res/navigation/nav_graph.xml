@@ -26,7 +26,11 @@
 
     <fragment
         android:id="@+id/editDetailsFragment"
+<<<<<<< HEAD
+        android:name="com.example.lzycrazy.`EditDetailsFragment.kt`"
+=======
         android:name="com.example.lzycrazy.not_in_currently_used.EditDetailsFragment"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
         android:label="Edit Details"/>
 
     <fragment

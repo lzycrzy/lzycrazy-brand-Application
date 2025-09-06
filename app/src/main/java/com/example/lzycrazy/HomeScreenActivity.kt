@@ -18,10 +18,15 @@ class HomeScreenActivity : AppCompatActivity() {
         val bottomView = findViewById<BottomNavigationView>(R.id.bottomNavigation)
         replaceWithFragment(HomeFragment())
         bottomView.setOnItemSelectedListener {
+
             when (it.itemId) {
                 R.id.nav_home -> replaceWithFragment(HomeFragment())
                 R.id.nav_ads -> replaceWithFragment(ReelsFragment())
                 R.id.nav_post -> replaceWithFragment(MarketFragment())
+<<<<<<< HEAD
+                R.id.nav_market -> replaceWithFragment(AlertsFragment())
+                R.id.nav_business -> replaceWithFragment(ProfileFragment())
+=======
                 R.id.nav_market -> {
                     val intent = Intent(this, MarketplaceActivity::class.java)
                     startActivity(intent)
@@ -29,6 +34,7 @@ class HomeScreenActivity : AppCompatActivity() {
                 }
                 R.id.nav_business -> replaceWithFragment(PCAccessoriesFragment())
                 else -> false
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             }
             true
         }

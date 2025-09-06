@@ -1,7 +1,11 @@
 plugins {
     id("com.android.application")
+<<<<<<< HEAD
+    id("org.jetbrains.kotlin.android") version "2.2.0"
+=======
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 }
 
 android {

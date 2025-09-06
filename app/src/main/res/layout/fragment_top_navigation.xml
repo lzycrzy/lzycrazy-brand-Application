@@ -3,9 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+<<<<<<< HEAD
+    android:orientation="vertical">
+=======
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:context=".TopNavigationFragment">
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 
     <!-- Top Navigation Bar -->
     <LinearLayout
@@ -62,8 +66,13 @@
             <ImageView
                 android:id="@+id/messageIcon"
                 android:layout_width="28dp"
+<<<<<<< HEAD
+                android:layout_height="28dp"
+                android:contentDescription="cart"
+=======
                 android:layout_height="wrap_content"
                 android:contentDescription="chat section"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
                 android:src="@drawable/ic_message_fragment_top_navigation" />
         </FrameLayout>
 
@@ -73,14 +82,21 @@
             android:layout_weight="0" />
 
         <FrameLayout
+<<<<<<< HEAD
+=======
             android:id="@+id/profileContainer"
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:background="@color/colorWhite"
+<<<<<<< HEAD
+            android:padding="4dp">
+=======
             android:padding="4dp"
             android:clickable="true"
             android:focusable="true">
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
 
             <ImageView
                 android:id="@+id/profile_image"
@@ -90,7 +106,15 @@
                 android:src="@drawable/ic_profile_fragment_top_navigation"
                 android:background="@drawable/circle_background"
                 app:civ_border_width="2dp"
+<<<<<<< HEAD
+                app:civ_border_color="@color/black"
+                android:clickable="true"
+                android:focusable="true" />
+
+
+=======
                 app:civ_border_color="@color/black" />
+>>>>>>> 3818ee7e7ac955f3076add2364d7e5ed85f9236b
         </FrameLayout>
 
     </LinearLayout>

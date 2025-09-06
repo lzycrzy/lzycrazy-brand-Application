@@ -1,248 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:background="#F5F5F5">
 
-    <LinearLayout
+    <!--  Top Navigation Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/topNavigationFragmentContainer"
+        android:name="com.example.lzycrazy.TopNavigationFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        tools:layout="@layout/fragment_top_navigation" />
 
-        <!-- Header Section -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@drawable/lzycrazy_logo">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
-            <!-- White bottom strip -->
-            <View
-                android:id="@+id/whiteBackground"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:background="@android:color/white" />
-
-            <!-- Profile image container -->
-            <FrameLayout
-                android:id="@+id/profileImageContainer"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginStart="16dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="20dp">
-
-                <ImageView
-                    android:id="@+id/profileImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_profile_placeholder"
-                    android:background="@drawable/ic_circle_background"
-                    android:contentDescription="Profile Image"
-                    android:clipToOutline="true" />
-
-                <ImageView
-                    android:id="@+id/cameraIcon"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="top|end"
-                    android:layout_margin="4dp"
-                    android:src="@drawable/ic_camera_add"
-                    android:background="@drawable/circle_background"
-                    android:padding="2dp" />
-            </FrameLayout>
-
-            <!-- Name and Friends Count -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/profileImageContainer"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="-8dp"
-                android:layout_toEndOf="@id/profileImageContainer"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/userName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:text="Jaahid Hasan"
-                    android:textColor="@android:color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/friendCount1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="128 "
-                        android:textColor="@android:color/black"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/friendCount2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" friends"
-                        android:textColor="@color/colorGrey"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/LightGrey" />
-
-        <!-- Buttons Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:background="#F2F3F5"
-            android:layout_marginTop="8dp"
-            android:baselineAligned="false"
-            android:weightSum="10">
+            android:orientation="vertical"
+            android:background="#F5F5F5">
 
-            <!-- Add to Story Button -->
-            <Button
-                android:id="@+id/btn_add_story"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="4"
-                android:text="Add to story"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:background="@drawable/topdown_rounded_bg"
-                android:drawablePadding="8dp"
-                android:padding="0dp"
-                app:backgroundTint="@null"
-                android:backgroundTint="@color/denim_blue" />
-
-            <!-- Spacer -->
-            <Space
-                android:layout_width="25dp"
-                android:layout_height="match_parent" />
-
-            <!-- Edit Profile Button -->
-            <Button
-                android:id="@+id/btn_edit_profile"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="4"
-                android:text="Edit profile"
-                android:textColor="@color/colorWhite"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:background="@drawable/topdown_rounded_bg"
-                android:drawablePadding="8dp"
-                android:padding="0dp"
-                app:backgroundTint="@null"
-                android:backgroundTint="@color/denim_blue" />
-
-            <!-- Spacer -->
-            <Space
-                android:layout_width="25dp"
-                android:layout_height="match_parent" />
-
-            <!-- Settings Button -->
-            <ImageButton
-                android:id="@+id/btn_settings"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:src="@drawable/outline_settings_threeline"
-                android:background="@drawable/topdown_rounded_bg"
-                android:backgroundTint="#E4E6EB"
-                android:contentDescription="Settings"
-                android:scaleType="centerInside"
-                android:padding="8dp" />
-        </LinearLayout>
-
-        <!-- Tabs -->
-        <LinearLayout
-            android:id="@+id/profile_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Posts"
-                android:textStyle="bold"
-                android:padding="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About"
-                android:textStyle="bold"
-                android:padding="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Photos"
-                android:textStyle="bold"
-                android:padding="12dp" />
-        </LinearLayout>
-
-        <!-- About Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
-
+            <!-- Top Profile Section -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:layout_height="160dp"
+                android:background="@color/denim_blue">
 
-                <!-- Edit Button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/denim_blue">
+
+                    <!-- Profile + Username Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp">
+
+                        <!-- Profile image container -->
+                        <FrameLayout
+                            android:id="@+id/profileImageContainer"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/circle_outer_background"
+                            android:layout_marginEnd="16dp"
+                            android:clipToOutline="true">
+
+                            <!-- Inner profile circle -->
+                            <LinearLayout
+                                android:layout_width="95dp"
+                                android:layout_height="95dp"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:background="@drawable/circle_inner_background"
+                                android:gravity="center">
+
+                                <!-- Profile image -->
+                                <ImageView
+                                    android:id="@+id/profileImage"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_camera_add"
+                                    android:scaleType="centerInside"
+                                    android:clipToOutline="true" />
+
+                                <!-- Add Photo text -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Add Photo"
+                                    android:textColor="#000000"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Camera icon -->
+                            <ImageView
+                                android:id="@+id/cameraIcon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="top|end"
+                                android:layout_margin="6dp"
+                                android:src="@drawable/ic_camera_add"
+                                android:background="@drawable/circle_inner_background"
+                                android:padding="4dp" />
+                        </FrameLayout>
+
+                        <!-- Username -->
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User Name"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="12dp"
+                android:background="@color/denim_blue"
+                android:baselineAligned="false">
+
+                <!-- Add to Story -->
                 <Button
-                    android:id="@+id/btnEditDetails"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Edit Details"
+                    android:id="@+id/btn_add_story"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:text="Add to story"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    android:background="@drawable/rounded_button"
                     android:backgroundTint="@color/colorWhite"
                     app:backgroundTint="@null"
-                    android:textColor="#000000"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginBottom="8dp"
-                    android:drawableLeft="@drawable/ic_edit_"
-                    android:padding="8dp"
-                    android:drawablePadding="4dp" />
+                    android:drawablePadding="15dp"
+                    android:paddingVertical="15dp"
+                    android:paddingHorizontal="70dp"
+                    android:padding="0dp"
+                    android:background="@drawable/topdown_rounded_bg" />
 
-                <!-- Info Items RecyclerView -->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/aboutRecyclerView"
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Edit Profile -->
+                <Button
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="5"
+                    android:text="Edit profile"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/colorWhite"
+                    app:backgroundTint="@null"
+                    android:drawablePadding="8dp"
+                    android:paddingVertical="50dp"
+                    android:paddingHorizontal="10dp"
+                    android:padding="0dp"
+                    android:background="@drawable/topdown_rounded_bg" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent" />
+
+                <!-- Settings -->
+                <ImageButton
+                    android:id="@+id/btn_settings"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_settings_logo"
+                    android:background="@drawable/topdown_rounded_bg"
+                    android:contentDescription="Settings"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <!-- Tabs -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbout"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textStyle="bold"
+                    app:checkedIcon="@null"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMyAds"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Ads"
+                    android:textStyle="bold"
+                    app:checkedIcon="@null"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPosts"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posts"
+                    android:textStyle="bold"
+                    app:checkedIcon="@null"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey" />
+
+            <!-- About Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/btnEditDetails"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-</ScrollView>
+                    android:padding="16dp">
+
+                    <!-- Edit Button -->
+                    <Button
+                        android:id="@+id/btnEditDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Details"
+                        android:textStyle="bold"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/colorWhite"
+                        app:backgroundTint="@null"
+                        android:textColor="#000000"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="8dp"
+                        android:drawableLeft="@drawable/ic_edit_"
+                        android:padding="8dp"
+                        android:drawablePadding="4dp" />
+
+                    <LinearLayout
+                        android:id="@+id/detailsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnEditDetails"
+                        android:orientation="vertical"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Email:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Phone:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gender:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Country:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="State:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="City:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvBusinessLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Business Profile Link:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvNeighbour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Neighbour:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvDob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date of Birth:"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--  Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:menu="@menu/bottom_nav_menu" />
+</LinearLayout>
